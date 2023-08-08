@@ -9,14 +9,14 @@ import { FormattedMessage } from "react-intl";
 export function WebVRUnsupportedModal({ onClose }) {
   return (
     <Modal
-      title={<FormattedMessage id="webvr-unsupported-modal.title" defaultMessage="Enter in VR" />}
+      title={<FormattedMessage id="webvr-unsupported-modal.title" defaultMessage="Вход в VR" />}
       beforeTitle={<CloseButton onClick={onClose} />}
     >
       <Column padding center>
         <p>
           <FormattedMessage
             id="webvr-unsupported-modal.message"
-            defaultMessage="WebVR isn't supported in this browser, to enter with Oculus or SteamVR, use Firefox."
+            defaultMessage="WebVR не поддерживается в этом браузере, для входа с помощью Oculus или SteamVR используйте Firefox."
           />
         </p>
         <Button
@@ -27,14 +27,14 @@ export function WebVRUnsupportedModal({ onClose }) {
           rel="noreferrer noopener"
         >
           <span>
-            <FormattedMessage id="webvr-unsupported-modal.download-firefox-button" defaultMessage="Download Firefox" />
+            <FormattedMessage id="webvr-unsupported-modal.download-firefox-button" defaultMessage="Скачать Firefox" />
           </span>
         </Button>
         <p>
           <small>
             <FormattedMessage
               id="webvr-unsupported-modal.webvr-rocks-link"
-              defaultMessage="For a list of browsers with experimental VR support, visit <a>WebVR Rocks</a>."
+              defaultMessage="Список браузеров с экспериментальной поддержкой VR можно найти на сайте <a>WebVR Rocks</a>."
               values={{
                 // eslint-disable-next-line react/display-name
                 a: chunks => (

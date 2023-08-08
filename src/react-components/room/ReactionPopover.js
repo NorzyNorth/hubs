@@ -31,7 +31,7 @@ function ReactionPopoverContent({ items, presence, onToggleHandRaised, ...rest }
       </Row>
       <Row>
         <label className={styles.label}>
-          <FormattedMessage id="reaction-popover.action" defaultMessage="Actions" />
+          <FormattedMessage id="reaction-popover.action" defaultMessage="Действия" />
         </label>
       </Row>
       <Row nowrap>
@@ -51,11 +51,11 @@ function TooltipPopoverContent({ onToggleHandRaised }) {
   return (
     <Row nowrap className={styles.popover}>
       <Column padding="xs" grow gap="xs">
-        <FormattedMessage id="reaction-popover.hand-raised-warning" defaultMessage="Your hand is raised" />
+        <FormattedMessage id="reaction-popover.hand-raised-warning" defaultMessage="Ваша рука поднята" />
       </Column>
       <Column padding="xs" grow gap="xs">
         <Button sm thin preset={"primary"} onClick={onToggleHandRaised}>
-          <FormattedMessage id="reaction-popover.lower-hand" defaultMessage="Lower Hand" />
+          <FormattedMessage id="reaction-popover.lower-hand" defaultMessage="Рука опущена" />
         </Button>
       </Column>
     </Row>

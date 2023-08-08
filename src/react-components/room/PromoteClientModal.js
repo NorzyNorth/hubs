@@ -13,7 +13,7 @@ export function PromoteClientModal({ onClose, onConfirm, displayName }) {
         <p>
           <FormattedMessage
             id="promote-client-modal.message"
-            defaultMessage="Promoting a user will grant full access to room settings and moderation tools.{linebreak}Are you sure?"
+            defaultMessage="Продвижение пользователя открывает полный доступ к настройкам комнаты и инструментам модерации.{linebreak}Вы уверены?"
             values={{ linebreak: <br /> }}
           />
         </p>

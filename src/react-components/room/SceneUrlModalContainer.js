@@ -15,7 +15,7 @@ export function SceneUrlModalContainer({ hubChannel, onClose }) {
         valid ||
         intl.formatMessage({
           id: "scene-url-modal.invalid-scene-url",
-          defaultMessage: "This URL does not point to a scene or valid GLB."
+          defaultMessage: "Этот URL-адрес не указывает на сцену или действительный GLB."
         })
       );
     },

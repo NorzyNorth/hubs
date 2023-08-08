@@ -23,7 +23,7 @@ export function EnterOnDeviceModal({
 
   return (
     <Modal
-      title={<FormattedMessage id="enter-on-device-modal.title" defaultMessage="Enter on Device" />}
+      title={<FormattedMessage id="enter-on-device-modal.title" defaultMessage="Ввод на устройстве" />}
       beforeTitle={<BackButton onClick={onBack} />}
       className={className}
       {...rest}
@@ -31,24 +31,30 @@ export function EnterOnDeviceModal({
       <Column center={loadingCode ? "both" : true} padding grow>
         {loadingCode ? (
           <b>
-            <FormattedMessage id="enter-on-device-modal.generating-code" defaultMessage="Generating join code..." />
+            <FormattedMessage
+              id="enter-on-device-modal.generating-code"
+              defaultMessage="Генерация кода присоединения..."
+            />
           </b>
         ) : (
           <>
             <b>
-              <FormattedMessage id="enter-on-device-modal.heading" defaultMessage="Enter on Wireless Headset / Phone" />
+              <FormattedMessage
+                id="enter-on-device-modal.heading"
+                defaultMessage="Включение беспроводной гарнитуры / телефона"
+              />
             </b>
             <small>
               <FormattedMessage
                 id="enter-on-device-modal.short-url-directions"
-                defaultMessage="In your device's web browser, go to:"
+                defaultMessage="В веб-браузере устройства перейдите на страницу:"
               />
             </small>
             <div className={styles.shortUrlContainer}>{shortUrl}</div>
             <small>
               <FormattedMessage
                 id="enter-on-device-modal.code-directions"
-                defaultMessage="Then, enter this one-time code:"
+                defaultMessage="Затем введите этот одноразовый код:"
               />
             </small>
             <div className={styles.codeContainer}>
@@ -61,13 +67,13 @@ export function EnterOnDeviceModal({
             <strong>
               <FormattedMessage
                 id="enter-on-device-modal.data-transfer"
-                defaultMessage="Your account and avatar will be transferred to the device."
+                defaultMessage="Ваша учетная запись и аватар будут перенесены на устройство."
               />
             </strong>
             <strong>
               <FormattedMessage
                 id="enter-on-device-modal.keep-page-open"
-                defaultMessage="Keep this page open to use this code."
+                defaultMessage="Сохраните эту страницу открытой, чтобы использовать данный код."
               />
             </strong>
             {headsetConnected && (
@@ -78,7 +84,7 @@ export function EnterOnDeviceModal({
                 <b>
                   <FormattedMessage
                     id="enter-on-device-modal.headset-connected-heading"
-                    defaultMessage="Enter on Connected Headset"
+                    defaultMessage="Ввод на подключенной гарнитуре"
                   />
                 </b>
                 {unsupportedBrowser ? (
@@ -86,7 +92,7 @@ export function EnterOnDeviceModal({
                     <small>
                       <FormattedMessage
                         id="enter-on-device-modal.unsupported-browser"
-                        defaultMessage="WebVR isn't supported in this browser, to enter with Oculus or SteamVR, use Firefox."
+                        defaultMessage="WebVR не поддерживается в этом браузере, для входа с помощью Oculus или SteamVR используйте Firefox."
                       />
                     </small>
                     <Button
@@ -109,13 +115,13 @@ export function EnterOnDeviceModal({
                     <small>
                       <FormattedMessage
                         id="enter-on-device-modal.headset-connected-message"
-                        defaultMessage="You have a VR headset connected to this device."
+                        defaultMessage="К этому устройству подключена гарнитура виртуальной реальности."
                       />
                     </small>
                     <Button preset="accent5" onClick={onEnterOnConnectedHeadset}>
                       <VRIcon />
                       <span>
-                        <FormattedMessage id="enter-on-device-modal.enter-in-vr-button" defaultMessage="Enter in VR" />
+                        <FormattedMessage id="enter-on-device-modal.enter-in-vr-button" defaultMessage="Вход в VR" />
                       </span>
                     </Button>
                   </>

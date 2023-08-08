@@ -383,7 +383,7 @@ class AvatarPreview extends Component {
             <img src={warningIconUrl} srcSet={`${warningIcon2xUrl} 2x`} className="error-icon" />
             <FormattedMessage
               id="avatar-preview.loading-failed"
-              defaultMessage="Loading failed{linebreak}Please choose another avatar"
+              defaultMessage="Загрузка не удалась{linebreak}Пожалуйста, выберите другой аватар"
               values={{ linebreak: <br /> }}
             />
           </div>

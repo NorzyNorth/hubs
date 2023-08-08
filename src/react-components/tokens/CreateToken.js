@@ -30,17 +30,17 @@ export const CreateToken = ({
 }) => (
   <div>
     <h1>
-      <FormattedMessage id="new-token.title" defaultMessage="New Token" />
+      <FormattedMessage id="new-token.title" defaultMessage="Новый токен" />
     </h1>
     <SpinWhileTrue isSpinning={isPending}>
       {error && (
         <Row padding="sm" className={styles.revokeWarning}>
-          <p>{`An Error occured: ${error}`}</p>
+          <p>{`Произошла ошибка: ${error}`}</p>
         </Row>
       )}
       <Row gap="xl" breakpointColumn="md" className={styleUtils.smMarginY}>
         <h2 className={styleUtils.flexBasis40}>
-          <FormattedMessage id="new-token.token-type" defaultMessage="Token type" />
+          <FormattedMessage id="new-token.token-type" defaultMessage="Тип токена" />
         </h2>
         <Row className={styleUtils.flexBasis60}>
           <RadioInputField className={styles.flexDirectionRow} inputClassName={styles.flexDirectionRow}>
@@ -61,12 +61,12 @@ export const CreateToken = ({
       <Divider />
       <Column gap="xl" className={styleUtils.mdMarginY}>
         <h2>
-          <FormattedMessage id="new-token.select-scopes-title" defaultMessage="Select scopes" />
+          <FormattedMessage id="new-token.select-scopes-title" defaultMessage="Выбор диапазонов" />
         </h2>
         <p>
           <FormattedMessage
             id="new-token.select-scopes-description"
-            defaultMessage="Set the level of access this token will have by choosing from the scopes list."
+            defaultMessage="Установите уровень доступа, которым будет обладать данный токен, выбрав его из списка диапазонов."
           />
         </p>
       </Column>
@@ -87,21 +87,21 @@ export const CreateToken = ({
           <p className={styleUtils.textError}>
             <FormattedMessage
               id="new-token.warning-at-least-one-scope"
-              defaultMessage="Please select at least one scope."
+              defaultMessage="Пожалуйста, выберите хотя бы одну сферу деятельности."
             />
           </p>
         </Row>
       )}
       <Row spaceBetween className={styleUtils.xlMarginBottom}>
         <Button sm preset="basic" onClick={onCreateTokenCancelled}>
-          <FormattedMessage id="new-token.back" defaultMessage="Back" />
+          <FormattedMessage id="new-token.back" defaultMessage="Назад" />
         </Button>
         <Button
           sm
           preset="primary"
           onClick={() => onCreateToken({ tokenType: selectedTokenType, scopes: selectedScopes })}
         >
-          <FormattedMessage id="new-token.generate" defaultMessage="Generate" />
+          <FormattedMessage id="new-token.generate" defaultMessage="Создать" />
         </Button>
       </Row>
     </SpinWhileTrue>
@@ -128,20 +128,20 @@ const scopeInfo = {
   write_rooms: defineMessages({
     description: {
       id: "new-token-scopes.write-rooms.description",
-      defaultMessage: "Write room data"
+      defaultMessage: "Запись данных о комнате"
     }
   }),
   read_rooms: defineMessages({
     description: {
       id: "new-token-scopes.read-rooms.description",
-      defaultMessage: "Read room data"
+      defaultMessage: "Считывание данных о комнате"
     }
   }),
   // For storybook long scope example in Tokens.stories.js
   another_long_scope_here: defineMessages({
     description: {
       id: "new-token-scopes.write-rooms.description",
-      defaultMessage: "Write room data"
+      defaultMessage: "Запись данных о комнате"
     }
   })
 };

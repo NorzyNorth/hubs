@@ -9,19 +9,19 @@ import { Column } from "../layout/Column";
 export function TwitterOAuthModal({ appName, onConnect, onClose }) {
   return (
     <Modal
-      title={<FormattedMessage id="twitter-oauth-modal.title" defaultMessage="Connect to Twitter" />}
+      title={<FormattedMessage id="twitter-oauth-modal.title" defaultMessage="Подключение к Twitter" />}
       beforeTitle={<CloseButton onClick={onClose} />}
     >
       <Column padding center centerMd="both" grow>
         <p>
           <FormattedMessage
             id="twitter-oauth-modal.message"
-            defaultMessage="Connect to Twitter to send tweets from {appName}."
+            defaultMessage="Подключение к Twitter для отправки твитов из {appName}."
             values={{ appName }}
           />
         </p>
         <Button preset="accent4" onClick={onConnect}>
-          <FormattedMessage id="twitter-oauth-modal.connect-button" defaultMessage="Connect to Twitter" />
+          <FormattedMessage id="twitter-oauth-modal.connect-button" defaultMessage="Подключение к Twitter" />
         </Button>
       </Column>
     </Modal>

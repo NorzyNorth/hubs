@@ -24,9 +24,9 @@ export function HandRaisedButton({ active, ...props }) {
       <HandRaisedIcon width="42px" height="42px" />
       <p>
         {active ? (
-          <FormattedMessage id="reaction-popover.lower-hand" defaultMessage="Lower Hand" />
+          <FormattedMessage id="reaction-popover.lower-hand" defaultMessage="Опустить рука" />
         ) : (
-          <FormattedMessage id="reaction-popover.raise-hand" defaultMessage="Raise Hand" />
+          <FormattedMessage id="reaction-popover.raise-hand" defaultMessage="Поднять руку" />
         )}
       </p>
     </ReactionButton>

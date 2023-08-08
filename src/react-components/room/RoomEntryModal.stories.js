@@ -9,4 +9,4 @@ export default {
   }
 };
 
-export const Base = () => <RoomLayout viewport={<RoomEntryModal roomName="Example Room" />} />;
+export const Base = () => <RoomLayout viewport={<RoomEntryModal roomName="Пример комнаты" />} />;

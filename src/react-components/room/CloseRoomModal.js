@@ -21,36 +21,44 @@ export function CloseRoomModal({ roomName, onClose, onConfirm }) {
 
   return (
     <Modal
-      title={<FormattedMessage id="close-room-modal.title" defaultMessage="Close Room" />}
+      title={<FormattedMessage id="close-room-modal.title" defaultMessage="Закрыть комнату" />}
       beforeTitle={<CloseButton onClick={onClose} />}
     >
       <Column padding center centerMd="both" grow>
         <p>
           <FormattedMessage
             id="close-room-modal.message"
-            defaultMessage="Closing this room will remove yourself and others from the room, shutting it down permanently.{linebreak}Are you sure? This action cannot be undone."
+            defaultMessage="Закрывая эту комнату, вы удаляете себя и других из нее, навсегда закрывая ее.{linebreak}Вы уверены? Это действие нельзя отменить."
             values={{ linebreak: <br /> }}
           />
         </p>
         <p>
           <FormattedMessage
             id="close-room-modal.type-to-confirm"
-            defaultMessage="Type room name to confirm: {roomName}"
+            defaultMessage="Введите название комнаты для подтверждения: {roomName}"
             values={{ roomName: <b>{roomName}</b> }}
           />
         </p>
         <TextInputField
-          label={<FormattedMessage id="close-room-modal.confirm-room-name-field" defaultMessage="Confirm Room Name" />}
+          label={
+            <FormattedMessage
+              id="close-room-modal.confirm-room-name-field"
+              defaultMessage="Подтвердить название комнаты"
+            />
+          }
           onChange={e => setConfirmText(e.target.value)}
           value={confirmText}
           error={
             showIsNotMatchError && (
-              <FormattedMessage id="close-room-modal.room-name-match-error" defaultMessage="Room name does not match" />
+              <FormattedMessage
+                id="close-room-modal.room-name-match-error"
+                defaultMessage="Название помещения не совпадает"
+              />
             )
           }
         />
         <Button preset="accept" onClick={onClickConfirm}>
-          <FormattedMessage id="close-room-modal.confirm" defaultMessage="Yes, Close Room" />
+          <FormattedMessage id="close-room-modal.confirm" defaultMessage="Да, закрытая комната" />
         </Button>
         <CancelButton onClick={onClose} />
       </Column>

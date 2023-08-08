@@ -54,7 +54,7 @@ export function RoomSettingsSidebar({
 
   return (
     <Sidebar
-      title={<FormattedMessage id="room-settings-sidebar.title" defaultMessage="Room Settings" />}
+      title={<FormattedMessage id="room-settings-sidebar.title" defaultMessage="Параметры комнаты" />}
       beforeTitle={showBackButton ? <BackButton onClick={onClose} /> : <CloseButton onClick={onClose} />}
     >
       <Column padding as="form" onSubmit={handleSubmit(onSubmit)}>
@@ -70,11 +70,11 @@ export function RoomSettingsSidebar({
           autoComplete="off"
           placeholder={intl.formatMessage({
             id: "room-settings-sidebar.name-placeholder",
-            defaultMessage: "Room name"
+            defaultMessage: "Имя комнаты"
           })}
           minLength={1}
           maxLength={64}
-          label={<FormattedMessage id="room-settings-sidebar.name" defaultMessage="Room Name" />}
+          label={<FormattedMessage id="room-settings-sidebar.name" defaultMessage="Имя комнаты" />}
           error={errors?.name?.message}
           fullWidth
           {...register("name")}
@@ -83,9 +83,9 @@ export function RoomSettingsSidebar({
           autoComplete="off"
           placeholder={intl.formatMessage({
             id: "room-settings-sidebar.description-placeholder",
-            defaultMessage: "Room Description"
+            defaultMessage: "Описание комнаты"
           })}
-          label={<FormattedMessage id="room-settings-sidebar.description" defaultMessage="Room Description" />}
+          label={<FormattedMessage id="room-settings-sidebar.description" defaultMessage="Описание комнаты" />}
           minRows={3}
           error={errors?.description?.message}
           fullWidth
@@ -97,24 +97,24 @@ export function RoomSettingsSidebar({
           max={maxRoomSize}
           placeholder={intl.formatMessage({
             id: "room-settings-sidebar.room-size-placeholder",
-            defaultMessage: "Member Limit"
+            defaultMessage: "Лимит участников"
           })}
-          label={<FormattedMessage id="room-settings-sidebar.room-size" defaultMessage="Room Size" />}
+          label={<FormattedMessage id="room-settings-sidebar.room-size" defaultMessage="Размер комнаты" />}
           error={errors?.room_size?.message}
           fullWidth
           {...register("room_size")}
         />
         <RadioInputField
-          label={<FormattedMessage id="room-settings-sidebar.room-access" defaultMessage="Room Access" />}
+          label={<FormattedMessage id="room-settings-sidebar.room-access" defaultMessage="Доступ в комнату" />}
           fullWidth
         >
           <RadioInputOption
             value="allow"
-            label={<FormattedMessage id="room-settings-sidebar.access-shared-link" defaultMessage="Shared link" />}
+            label={<FormattedMessage id="room-settings-sidebar.access-shared-link" defaultMessage="Общая ссылка" />}
             description={
               <FormattedMessage
                 id="room-settings-sidebar.access-shared-link-description"
-                defaultMessage="Only those with the link can join"
+                defaultMessage="Присоединиться могут только те, у кого есть ссылка"
               />
             }
             error={errors?.entry_mode?.message}
@@ -122,11 +122,13 @@ export function RoomSettingsSidebar({
           />
           <RadioInputOption
             value="invite"
-            label={<FormattedMessage id="room-settings-sidebar.access-invite" defaultMessage="Invite only" />}
+            label={
+              <FormattedMessage id="room-settings-sidebar.access-invite" defaultMessage="Только по приглашениям" />
+            }
             description={
               <FormattedMessage
                 id="room-settings-sidebar.access-invite-description"
-                defaultMessage="Invite people with a link that can be revoked"
+                defaultMessage="Приглашать людей с помощью ссылки, которая может быть отозвана"
               />
             }
             error={errors?.entry_mode?.message}
@@ -138,60 +140,60 @@ export function RoomSettingsSidebar({
         )}
         {showPublicRoomSetting && (
           <ToggleInput
-            label={<FormattedMessage id="room-settings-sidebar.access-public" defaultMessage="Public" />}
+            label={<FormattedMessage id="room-settings-sidebar.access-public" defaultMessage="Публичный" />}
             description={
               <FormattedMessage
                 id="room-settings-sidebar.access-public-description"
-                defaultMessage="Listed on the homepage"
+                defaultMessage="Размещено на главной странице"
               />
             }
             {...register("allow_promotion")}
           />
         )}
         <InputField
-          label={<FormattedMessage id="room-settings-sidebar.permissions" defaultMessage="Room Member Permissions" />}
+          label={<FormattedMessage id="room-settings-sidebar.permissions" defaultMessage="Полномочия членов комнаты" />}
           fullWidth
         >
           <div className={styles.roomPermissions}>
             <ToggleInput
-              label={<FormattedMessage id="room-settings-sidebar.voice-chat" defaultMessage="Voice chat" />}
+              label={<FormattedMessage id="room-settings-sidebar.voice-chat" defaultMessage="Голосовой чат" />}
               {...register("member_permissions.voice_chat")}
             />
             <ToggleInput
-              label={<FormattedMessage id="room-settings-sidebar.text-chat" defaultMessage="Text chat" />}
+              label={<FormattedMessage id="room-settings-sidebar.text-chat" defaultMessage="Текстовый чат" />}
               {...register("member_permissions.text_chat")}
             />
             <ToggleInput
               label={
                 <FormattedMessage
                   id="room-settings-sidebar.spawn-and-move-media"
-                  defaultMessage="Create and move objects"
+                  defaultMessage="Создавай и перемещай объекты"
                 />
               }
               {...register("member_permissions.spawn_and_move_media")}
             />
             <div className={styles.permissionsGroup}>
               <ToggleInput
-                label={<FormattedMessage id="room-settings-sidebar.spawn-camera" defaultMessage="Create cameras" />}
+                label={<FormattedMessage id="room-settings-sidebar.spawn-camera" defaultMessage="Создание камер" />}
                 disabled={!spawnAndMoveMedia}
                 {...register("member_permissions.spawn_camera")}
               />
               <ToggleInput
-                label={<FormattedMessage id="room-settings-sidebar.pin-objects" defaultMessage="Pin objects" />}
+                label={<FormattedMessage id="room-settings-sidebar.pin-objects" defaultMessage="Закрепить объект" />}
                 disabled={!spawnAndMoveMedia}
                 {...register("member_permissions.pin_objects")}
               />
             </div>
             <ToggleInput
-              label={<FormattedMessage id="room-settings-sidebar.spawn-drawing" defaultMessage="Create drawings" />}
+              label={<FormattedMessage id="room-settings-sidebar.spawn-drawing" defaultMessage="Создать рисунок" />}
               {...register("member_permissions.spawn_drawing")}
             />
             <ToggleInput
-              label={<FormattedMessage id="room-settings-sidebar.spawn-emoji" defaultMessage="Create emoji" />}
+              label={<FormattedMessage id="room-settings-sidebar.spawn-emoji" defaultMessage="Создать рисунок" />}
               {...register("member_permissions.spawn_emoji")}
             />
             <ToggleInput
-              label={<FormattedMessage id="room-settings-sidebar.fly" defaultMessage="Allow flying" />}
+              label={<FormattedMessage id="room-settings-sidebar.fly" defaultMessage="Разрешить полёт" />}
               {...register("member_permissions.fly")}
             />
           </div>

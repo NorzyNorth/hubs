@@ -56,13 +56,13 @@ function getDeviceIconComponent(ctx) {
 function getVoiceLabel(micPresence, intl) {
   if (micPresence) {
     if (micPresence.talking) {
-      return intl.formatMessage({ id: "people-sidebar.voice-label.talking", defaultMessage: "Talking" });
+      return intl.formatMessage({ id: "people-sidebar.voice-label.talking", defaultMessage: "Говорящий" });
     } else if (micPresence.muted) {
-      return intl.formatMessage({ id: "people-sidebar.voice-label.muted", defaultMessage: "Muted" });
+      return intl.formatMessage({ id: "people-sidebar.voice-label.muted", defaultMessage: "Приглушенный" });
     }
   }
 
-  return intl.formatMessage({ id: "people-sidebar.voice-label.not-talking", defaultMessage: "Not Talking" });
+  return intl.formatMessage({ id: "people-sidebar.voice-label.not-talking", defaultMessage: "Не разговаривает" });
 }
 
 function getVoiceIconComponent(micPresence) {
@@ -80,11 +80,11 @@ function getVoiceIconComponent(micPresence) {
 function getPresenceMessage(presence, intl) {
   switch (presence) {
     case "lobby":
-      return intl.formatMessage({ id: "people-sidebar.presence.in-lobby", defaultMessage: "In Lobby" });
+      return intl.formatMessage({ id: "people-sidebar.presence.in-lobby", defaultMessage: "В лобби" });
     case "room":
-      return intl.formatMessage({ id: "people-sidebar.presence.in-room", defaultMessage: "In Room" });
+      return intl.formatMessage({ id: "people-sidebar.presence.in-room", defaultMessage: "В комнате" });
     case "entering":
-      return intl.formatMessage({ id: "people-sidebar.presence.entering", defaultMessage: "Entering Room" });
+      return intl.formatMessage({ id: "people-sidebar.presence.entering", defaultMessage: "Вход в комнату" });
     default:
       return undefined;
   }
@@ -129,7 +129,7 @@ export function PeopleSidebar({
       title={
         <FormattedMessage
           id="people-sidebar.title"
-          defaultMessage="People ({numPeople})"
+          defaultMessage="Люди ({numPeople})"
           values={{ numPeople: people.length }}
         />
       }
@@ -137,7 +137,7 @@ export function PeopleSidebar({
       afterTitle={
         showMuteAll ? (
           <IconButton onClick={onMuteAll}>
-            <FormattedMessage id="people-sidebar.mute-all-button" defaultMessage="Mute All" />
+            <FormattedMessage id="people-sidebar.mute-all-button" defaultMessage="Приглушить всех" />
           </IconButton>
         ) : undefined
       }

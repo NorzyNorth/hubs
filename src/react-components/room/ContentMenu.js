@@ -29,7 +29,7 @@ export function ECSDebugMenuButton(props) {
     <ContentMenuButton {...props}>
       <ObjectsIcon />
       <span>
-        <FormattedMessage id="content-menu.ecs-debug-menu-button" defaultMessage="ECS Debug" />
+        <FormattedMessage id="content-menu.ecs-debug-menu-button" defaultMessage="Отладка ECS" />
       </span>
     </ContentMenuButton>
   );
@@ -40,7 +40,7 @@ export function ObjectsMenuButton(props) {
     <ContentMenuButton {...props}>
       <ObjectsIcon />
       <span>
-        <FormattedMessage id="content-menu.objects-menu-button" defaultMessage="Objects" />
+        <FormattedMessage id="content-menu.objects-menu-button" defaultMessage="Объекты" />
       </span>
     </ContentMenuButton>
   );
@@ -53,7 +53,7 @@ export function PeopleMenuButton(props) {
       <span>
         <FormattedMessage
           id="content-menu.people-menu-button"
-          defaultMessage="People ({presenceCount})"
+          defaultMessage="Люди ({presenceCount})"
           values={{ presenceCount: props.presencecount }}
         />
       </span>

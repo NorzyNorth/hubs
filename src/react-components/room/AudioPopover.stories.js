@@ -10,16 +10,16 @@ import { ReactComponent as MicrophoneIcon } from "../icons/Microphone.svg";
 import { ReactComponent as MicrophoneMutedIcon } from "../icons/MicrophoneMuted.svg";
 import { FormattedMessage } from "react-intl";
 
-const micOptions = ["Microphone 1", "Microphone 2 long text", "Microphone 3 even much much longer text"];
+const micOptions = ["Микрофон 1", "Микрофон 2 с длинным текстом", "Микрофон 3 гораздо более длинный текст"];
 const speakerOptions = [
-  "Speaker 1",
-  "Speaker 2",
-  "Speaker 3",
-  "Speaker 4",
-  "Speaker 5",
-  "Speaker 6",
-  "Speaker long text",
-  "Speaker event much much longer text"
+  "Динамик 1",
+  "Динамик 2",
+  "Динамик 3",
+  "Динамик 4",
+  "Динамик 5",
+  "Динамик 6",
+  "Выступающий с длинным текстом",
+  "Спикерское мероприятие гораздо более длинный текст"
 ];
 
 export default {

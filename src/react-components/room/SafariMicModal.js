@@ -6,18 +6,18 @@ import { FormattedMessage } from "react-intl";
 
 export function SafariMicModal() {
   return (
-    <Modal title={<FormattedMessage id="safari-mic-modal.title" defaultMessage="Microphone Access Required" />}>
+    <Modal title={<FormattedMessage id="safari-mic-modal.title" defaultMessage="Требуется доступ к микрофону" />}>
       <Column center padding>
         <FormattedMessage
           id="safari-mic-modal.message"
-          defaultMessage="<p>Hubs requires microphone permissions in Safari.</p><p>Please reload and allow microphone access to continue.</p>"
+          defaultMessage="<p>Hubs требует разрешения на использование микрофона в Safari.</p><p>Пожалуйста, перезагрузитесь и разрешите доступ к микрофону для продолжения работы.</p>"
           values={{
             // eslint-disable-next-line react/display-name
             p: chunks => <p>{chunks}</p>
           }}
         />
         <Button preset="accept" onClick={() => location.reload()}>
-          <FormattedMessage id="safari-mic-modal.reload-button" defaultMessage="Reload" />
+          <FormattedMessage id="safari-mic-modal.reload-button" defaultMessage="Перезагрузить" />
         </Button>
       </Column>
     </Modal>

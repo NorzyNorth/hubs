@@ -9,12 +9,12 @@ import { ToolTip } from "@mozilla/lilypad-ui";
 
 const placeTooltipDescription = defineMessage({
   id: "place-tooltip.description",
-  defaultMessage: "Select from a variety of objects and tools to edit your room"
+  defaultMessage: "Выбор из множества объектов и инструментов для редактирования помещения"
 });
 
 const placePopoverTitle = defineMessage({
   id: "place-popover.title",
-  defaultMessage: "Place"
+  defaultMessage: "Разместить"
 });
 
 export function PlacePopoverButton({ items }) {

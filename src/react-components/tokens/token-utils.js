@@ -30,7 +30,9 @@ export async function createToken({ tokenType, scopes }) {
     return res.json();
   } else {
     throw new Error(
-      res.statusText ? res.statusText : "Something went wrong with creating a new token. Please try again."
+      res.statusText
+        ? res.statusText
+        : "При создании нового токена что-то пошло не так. Пожалуйста, попробуйте еще раз."
     );
   }
 }

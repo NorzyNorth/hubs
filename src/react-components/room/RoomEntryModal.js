@@ -34,7 +34,7 @@ export function RoomEntryModal({
         {breakpoint !== "sm" && breakpoint !== "md" && <AppLogo className={styles.logo} />}
         <div className={styles.roomName}>
           <h5>
-            <FormattedMessage id="room-entry-modal.room-name-label" defaultMessage="Room Name" />
+            <FormattedMessage id="room-entry-modal.room-name-label" defaultMessage="Имя комнаты" />
           </h5>
           <p>{roomName}</p>
         </div>
@@ -43,7 +43,7 @@ export function RoomEntryModal({
             <Button preset="accent4" onClick={onJoinRoom}>
               <EnterIcon />
               <span>
-                <FormattedMessage id="room-entry-modal.join-room-button" defaultMessage="Join Room" />
+                <FormattedMessage id="room-entry-modal.join-room-button" defaultMessage="Войти в комнату" />
               </span>
             </Button>
           )}
@@ -51,7 +51,7 @@ export function RoomEntryModal({
             <Button preset="accent5" onClick={onEnterOnDevice}>
               <VRIcon />
               <span>
-                <FormattedMessage id="room-entry-modal.enter-on-device-button" defaultMessage="Enter On Device" />
+                <FormattedMessage id="room-entry-modal.enter-on-device-button" defaultMessage="Ввод на устройстве" />
               </span>
             </Button>
           )}
@@ -59,7 +59,7 @@ export function RoomEntryModal({
             <Button preset="accent2" onClick={onSpectate}>
               <ShowIcon />
               <span>
-                <FormattedMessage id="room-entry-modal.spectate-button" defaultMessage="Spectate" />
+                <FormattedMessage id="room-entry-modal.spectate-button" defaultMessage="Наблюдать" />
               </span>
             </Button>
           )}
@@ -69,7 +69,7 @@ export function RoomEntryModal({
               <Button preset="transparent" className={styleUtils.showLg} onClick={onRoomSettings}>
                 <SettingsIcon />
                 <span>
-                  <FormattedMessage id="room-entry-modal.room-settings-button" defaultMessage="Room Settings" />
+                  <FormattedMessage id="room-entry-modal.room-settings-button" defaultMessage="Параметры комнаты" />
                 </span>
               </Button>
             </>

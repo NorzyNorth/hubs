@@ -11,13 +11,16 @@ const isEndTooltipStep = step =>
   ["tips.desktop.end", "tips.mobile.end", "tips.desktop.menu", "tips.mobile.menu"].includes(step);
 
 function OkDismissLabel() {
-  return <FormattedMessage id="tips.dismiss.ok" defaultMessage="Ok" />;
+  return <FormattedMessage id="tips.dismiss.ok" defaultMessage="Ок" />;
 }
 
 export function FullscreenTip(props) {
   return (
     <Tip {...props} dismissLabel={<OkDismissLabel />}>
-      <FormattedMessage id="tips.fullscreen" defaultMessage="Entered fullscreen mode. Press Escape to show UI." />
+      <FormattedMessage
+        id="tips.fullscreen"
+        defaultMessage="Переход в полноэкранный режим. Нажмите Escape для отображения пользовательского интерфейса."
+      />
     </Tip>
   );
 }
@@ -25,7 +28,10 @@ export function FullscreenTip(props) {
 export function RecordModeTip() {
   return (
     <ToastTip>
-      <FormattedMessage id="record-mode-enabled-tip" defaultMessage="Record mode on, press 'B' to toggle off" />
+      <FormattedMessage
+        id="record-mode-enabled-tip"
+        defaultMessage="Режим записи включен, нажмите 'B' для выключения"
+      />
     </ToastTip>
   );
 }
@@ -86,7 +92,7 @@ export function TipContainer({ inLobby, inRoom, isStreaming, isEmbedded, scene, 
 
     return (
       <Tip onDismiss={() => setLobbyTipDismissed(true)} dismissLabel={<OkDismissLabel />}>
-        <FormattedMessage id="tips.lobby" defaultMessage="You're in the lobby. Others cannot see or hear you." />
+        <FormattedMessage id="tips.lobby" defaultMessage="Вы находитесь в лобби. Другие не видят и не слышат вас." />
       </Tip>
     );
   } else if (inRoom) {
@@ -99,7 +105,7 @@ export function TipContainer({ inLobby, inRoom, isStreaming, isEmbedded, scene, 
         <Tip onDismiss={() => setStreamingTipDismissed(true)} dismissLabel={<OkDismissLabel />}>
           <FormattedMessage
             id="tips.streaming"
-            defaultMessage="Now broadcasting to the lobby. Exit streamer mode in the more menu when you're done."
+            defaultMessage="Теперь вещание ведется в лобби. По окончании работы выйдите из режима стримера в меню Больше."
           />
         </Tip>
       );
@@ -110,7 +116,7 @@ export function TipContainer({ inLobby, inRoom, isStreaming, isEmbedded, scene, 
         <Tip onDismiss={() => setBroadcastTipDismissed(true)} dismissLabel={<OkDismissLabel />}>
           <FormattedMessage
             id="tips.discord"
-            defaultMessage="Chat in this room is being bridged to {broadcastTarget} on Discord."
+            defaultMessage="Чат в этой комнате переключается на {broadcastTarget} в Discord."
             values={{ broadcastTarget: discordBridges.map(channelName => "#" + channelName).join(", ") }}
           />
         </Tip>
@@ -122,7 +128,7 @@ export function TipContainer({ inLobby, inRoom, isStreaming, isEmbedded, scene, 
         <Tip onDismiss={() => setEmbeddedTipDismissed(true)} dismissLabel={<OkDismissLabel />}>
           <FormattedMessage
             id="tips.embedded"
-            defaultMessage="This room is embedded, so it may be visible to visitors on other websites."
+            defaultMessage="Эта комната является встроенной, поэтому она может быть видна посетителям других сайтов."
           />
         </Tip>
       );

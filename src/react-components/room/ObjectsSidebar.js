@@ -74,11 +74,14 @@ export function NoObjects({ canAddObjects }) {
   return (
     <li className={styles.noObjects}>
       <p>
-        <FormattedMessage id="objects-sidebar.no-objects" defaultMessage="There are no objects in the room." />
+        <FormattedMessage id="objects-sidebar.no-objects" defaultMessage="В комнате нет никаких предметов." />
       </p>
       {canAddObjects && (
         <p>
-          <FormattedMessage id="objects-sidebar.place-menu-tip" defaultMessage="Use the place menu to add objects." />
+          <FormattedMessage
+            id="objects-sidebar.place-menu-tip"
+            defaultMessage="Для добавления объектов используйте меню места."
+          />
         </p>
       )}
     </li>
@@ -95,7 +98,7 @@ export function ObjectsSidebar({ children, objectCount, onClose }) {
       title={
         <FormattedMessage
           id="objects-sidebar.title"
-          defaultMessage="Objects ({objectCount})"
+          defaultMessage="Объекты ({objectCount})"
           values={{ objectCount }}
         />
       }

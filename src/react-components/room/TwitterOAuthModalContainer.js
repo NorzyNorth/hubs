@@ -32,7 +32,7 @@ export function TwitterOAuthModalContainer({ hubChannel, onConnected, onClose, i
       console.error(error);
       if (error.message === "twitter_api_error" && isAdmin) {
         console.warn(
-          "Twitter might be misconfigured for Hubs Cloud. Check the docs here: https://hubs.mozilla.com/docs/hubs-cloud-third-party-integrations.html#twitter"
+          "Возможно, Twitter неправильно настроен для Balans Meta. Проверьте документацию здесь: https://hubs.mozilla.com/docs/hubs-cloud-third-party-integrations.html#twitter"
         );
       }
       onClose();

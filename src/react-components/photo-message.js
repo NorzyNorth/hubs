@@ -19,7 +19,7 @@ export default function PhotoMessage({ name, body: { src: url }, className, mayS
     title: intl.formatMessage(
       {
         id: "photo-message.default-tweet",
-        defaultMessage: "Taken in {shareHashtag}"
+        defaultMessage: "Взято в {shareHashtag}"
       },
       {
         shareHashtag: configs.translation("share-hashtag"),
@@ -34,7 +34,7 @@ export default function PhotoMessage({ name, body: { src: url }, className, mayS
       <div className={styles.mediaBody}>
         <FormattedMessage
           id="photo-message.body"
-          defaultMessage="{name} took a <a>photo</a>."
+          defaultMessage="{name} взял <a>photo</a>."
           values={{
             name: <b>{name}</b>,
             // eslint-disable-next-line react/display-name

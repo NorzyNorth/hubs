@@ -66,69 +66,69 @@ const DEFAULT_FACETS = {
 const poweredByMessages = defineMessages({
   images: {
     id: "media-browser.powered_by.images",
-    defaultMessage: "Search by Bing"
+    defaultMessage: "Поиск по Bing"
   },
   videos: {
     id: "media-browser.powered_by.videos",
-    defaultMessage: "Search by Bing"
+    defaultMessage: "Поиск по Bing"
   },
   youtube: {
     id: "media-browser.powered_by.youtube",
-    defaultMessage: "Search by Google"
+    defaultMessage: "Поиск по Google"
   },
   gifs: {
     id: "media-browser.powered_by.gifs",
-    defaultMessage: "Search by Tenor"
+    defaultMessage: "Поиск по Tenor"
   },
   sketchfab: {
     id: "media-browser.powered_by.sketchfab",
-    defaultMessage: "Search by Sketchfab"
+    defaultMessage: "Поиск по Sketchfab"
   },
   twitch: {
     id: "media-browser.powered_by.twitch",
-    defaultMessage: "Search by Twitch"
+    defaultMessage: "Поиск по Twitch"
   },
   scenes: {
     id: "media-browser.powered_by.scenes",
-    defaultMessage: "Made with {editorName}"
+    defaultMessage: "Изготовлено с использованием {editorName}"
   }
 });
 
 const customObjectMessages = defineMessages({
   object: {
     id: "media-browser.add_custom_object",
-    defaultMessage: "Custom URL or File"
+    defaultMessage: "Пользовательский URL или файл"
   },
   scene: {
     id: "media-browser.add_custom_scene",
-    defaultMessage: "Custom Scene"
+    defaultMessage: "Пользовательская сцена"
   },
   avatar: {
     id: "media-browser.add_custom_avatar",
-    defaultMessage: "Avatar GLB URL"
+    defaultMessage: "Аватар GLB URL"
   }
 });
 
 const searchPlaceholderMessages = defineMessages({
-  scenes: { id: "media-browser.search-placeholder.scenes", defaultMessage: "Search Scenes..." },
-  avatars: { id: "media-browser.search-placeholder.avatars", defaultMessage: "Search Avatars..." },
-  videos: { id: "media-browser.search-placeholder.videos", defaultMessage: "Search for Videos..." },
-  images: { id: "media-browser.search-placeholder.images", defaultMessage: "Search for Images..." },
-  youtube: { id: "media-browser.search-placeholder.youtube", defaultMessage: "Search for Youtube videos..." },
-  gifs: { id: "media-browser.search-placeholder.gifs", defaultMessage: "Search for GIFs..." },
-  twitch: { id: "media-browser.search-placeholder.twitch", defaultMessage: "Search for Twitch streams..." },
-  sketchfab: { id: "media-browser.search-placeholder.sketchfab", defaultMessage: "Search Sketchfab Models..." },
-  default: { id: "media-browser.search-placeholder.default", defaultMessage: "Search..." }
+  scenes: { id: "media-browser.search-placeholder.scenes", defaultMessage: "Поиск сцен..." },
+  avatars: { id: "media-browser.search-placeholder.avatars", defaultMessage: "Поиск аватаров..." },
+  videos: { id: "media-browser.search-placeholder.videos", defaultMessage: "Поиск видеоматериалов..." },
+  images: { id: "media-browser.search-placeholder.images", defaultMessage: "Поиск изображений..." },
+  youtube: { id: "media-browser.search-placeholder.youtube", defaultMessage: "Поиск видеороликов на Youtube..." },
+  gifs: { id: "media-browser.search-placeholder.gifs", defaultMessage: "Поиск GIF-файлов..." },
+  twitch: { id: "media-browser.search-placeholder.twitch", defaultMessage: "Поиск потоков на Twitch..." },
+  sketchfab: { id: "media-browser.search-placeholder.sketchfab", defaultMessage: "Поиск моделей в Sketchfab..." },
+  default: { id: "media-browser.search-placeholder.default", defaultMessage: "Поиск..." }
 });
 
 const emptyMessages = defineMessages({
   favorites: {
     id: "media-browser.empty.favorites",
-    defaultMessage: "You don't have any favorites. Click a ⭐ to add to your favorites."
+    defaultMessage: "У вас нет избранных. Нажмите на ⭐, чтобы добавить в избранное."
   },
   default: {
     id: "media-browser.empty.default",
-    defaultMessage: "No results. Try entering a new search above."
+    defaultMessage: "Нет результатов. Попробуйте ввести новый поиск выше."
   }
 });
 
@@ -396,7 +396,7 @@ class MediaBrowserContainer extends Component {
           {poweredByMessages[urlSource] && PRIVACY_POLICY_LINKS[urlSource] ? " | " : ""}
           {PRIVACY_POLICY_LINKS[urlSource] && (
             <a href={PRIVACY_POLICY_LINKS[urlSource]} target="_blank" rel="noreferrer noopener">
-              <FormattedMessage id="media-browser.privacy_policy" defaultMessage="Privacy Policy" />
+              <FormattedMessage id="media-browser.privacy_policy" defaultMessage="Политика конфиденциальности" />
             </a>
           )}
         </>
@@ -491,7 +491,7 @@ class MediaBrowserContainer extends Component {
               <CreateTile
                 type="avatar"
                 onClick={this.onCreateAvatar}
-                label={<FormattedMessage id="media-browser.create-avatar" defaultMessage="Create Avatar" />}
+                label={<FormattedMessage id="media-browser.create-avatar" defaultMessage="Создать аватар" />}
               />
             )}
             {urlSource === "scenes" && configs.feature("enable_spoke") && (
@@ -504,7 +504,7 @@ class MediaBrowserContainer extends Component {
                 label={
                   <FormattedMessage
                     id="media-browser.create-scene"
-                    defaultMessage="Create Scene with {editorName}"
+                    defaultMessage="Создание сцены с помощью {editorName}"
                     values={{ editorName: configs.translation("editor-name") }}
                   />
                 }

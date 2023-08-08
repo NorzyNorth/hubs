@@ -371,23 +371,23 @@ ListItem.propTypes = {
 const preferenceLabels = defineMessages({
   preferredCamera: {
     id: "preferences-screen.preference.preferred-camera",
-    defaultMessage: "Preferred camera"
+    defaultMessage: "Предпочтительная камера"
   },
   preferredMic: {
     id: "preferences-screen.preference.preferred-mic",
-    defaultMessage: "Preferred mic"
+    defaultMessage: "Предпочтительный микрофон"
   },
   preferredSpeakers: {
     id: "preferences-screen.preference.preferred-speakers",
-    defaultMessage: "Preferred speakers"
+    defaultMessage: "Предпочтительные докладчики"
   },
   globalVoiceVolume: {
     id: "preferences-screen.preference.global-voice-volume",
-    defaultMessage: "Incoming Voice Volume"
+    defaultMessage: "Громкость входящего голоса"
   },
   globalMediaVolume: {
     id: "preferences-screen.preference.global-media-volume",
-    defaultMessage: "Media Volume"
+    defaultMessage: "Объем носителя"
   },
   globalSFXVolume: {
     id: "preferences-screen.preference.global-sfx-volume",
@@ -395,163 +395,164 @@ const preferenceLabels = defineMessages({
   },
   avatarVoiceLevels: {
     id: "preferences-screen.preference.avatar-volumes",
-    defaultMessage: "Stored avatar volumes"
+    defaultMessage: "Объемы хранимых аватаров"
   },
   disableSoundEffects: {
     id: "preferences-screen.preference.disable-sound-effects",
-    defaultMessage: "Disable Sound Effects"
+    defaultMessage: "Отключение звуковых эффектов"
   },
   disableEchoCancellation: {
     id: "preferences-screen.preference.disable-echo-cancellation",
-    defaultMessage: "Disable microphone echo cancellation"
+    defaultMessage: "Отключение эхоподавления микрофона"
   },
   disableNoiseSuppression: {
     id: "preferences-screen.preference.disable-noise-suppression",
-    defaultMessage: "Disable microphone noise supression"
+    defaultMessage: "Отключение шумоподавления микрофона"
   },
   disableAutoGainControl: {
     id: "preferences-screen.preference.disable-auto-gain-control",
-    defaultMessage: "Disable microphone automatic gain control"
+    defaultMessage: "Отключение автоматической регулировки усиления микрофона"
   },
   snapRotationDegrees: {
     id: "preferences-screen.preference.snap-rotation-degrees",
-    defaultMessage: "Rotation per snap (in degrees)"
+    defaultMessage: "Вращение за один снэп (в градусах)"
   },
   disableMovement: {
     id: "preferences-screen.preference.disable-movement",
-    defaultMessage: "Disable movement"
+    defaultMessage: "Отключить движение"
   },
   disableBackwardsMovement: {
     id: "preferences-screen.preference.disable-backwards-movement",
-    defaultMessage: "Disable backwards movement"
+    defaultMessage: "Отключение движения назад"
   },
   disableStrafing: {
     id: "preferences-screen.preference.disable-strafing",
-    defaultMessage: "Disable strafing"
+    defaultMessage: "Отключить обстрел"
   },
   disableTeleporter: {
     id: "preferences-screen.preference.disable-teleporter",
-    defaultMessage: "Disable teleporter"
+    defaultMessage: "Отключить телепортацию"
   },
   movementSpeedModifier: {
     id: "preferences-screen.preference.movement-speed-modifier",
-    defaultMessage: "Movement speed modifier"
+    defaultMessage: "Модификатор скорости движения"
   },
   enableOnScreenJoystickLeft: {
     id: "preferences-screen.preference.enable-on-screen-joystick-left",
-    defaultMessage: "Enable left on-screen joystick for moving around"
+    defaultMessage: "Включение левого экранного джойстика для перемещения по экрану"
   },
   enableOnScreenJoystickRight: {
     id: "preferences-screen.preference.enable-on-screen-joystick-right",
-    defaultMessage: "Enable right on-screen joystick for looking around"
+    defaultMessage: "Включение правого экранного джойстика для осмотра окрестностей"
   },
   enableGyro: {
     id: "preferences-screen.preference.enable-gyro",
-    defaultMessage: "Enable gyroscope (when supported by browser/device)"
+    defaultMessage: "Включить гироскоп (если это поддерживается браузером/устройством)"
   },
   invertTouchscreenCameraMove: {
     id: "preferences-screen.preference.invert-touchscreen-camera-move",
-    defaultMessage: "Invert direction of camera movement for touchscreens"
+    defaultMessage: "Инвертирование направления движения камеры для сенсорных экранов"
   },
   locale: {
     id: "preferences-screen.preference.locale",
-    defaultMessage: "Language"
+    defaultMessage: "Язык"
   },
   animateWaypointTransitions: {
     id: "preferences-screen.preference.animate-waypoint-transitions",
-    defaultMessage: "Animate waypoint transitions"
+    defaultMessage: "Анимировать переходы между путевыми точками"
   },
   showFPSCounter: {
     id: "preferences-screen.preference.show-fps-counter",
-    defaultMessage: "Show FPS Counter"
+    defaultMessage: "Показать счетчик FPS"
   },
   maxResolution: {
     id: "preferences-screen.preference.max-resolution",
-    defaultMessage: "Max Resolution"
+    defaultMessage: "Максимальное разрешение"
   },
   materialQualitySetting: {
     id: "preferences-screen.preference.material-quality-setting",
-    defaultMessage: "Material quality"
+    defaultMessage: "Качество материала"
   },
   enableDynamicShadows: {
     id: "preferences-screen.preference.enable-dynamic-shadows",
-    defaultMessage: "Enable Real-time Shadows"
+    defaultMessage: "Включение теней в реальном времени"
   },
   disableAutoPixelRatio: {
     id: "preferences-screen.preference.disable-auto-pixel-ratio",
-    defaultMessage: "Disable automatic pixel ratio adjustments"
+    defaultMessage: "Отключение автоматической регулировки соотношения пикселей"
   },
   allowMultipleHubsInstances: {
     id: "preferences-screen.preference.allow-multiple-hubs-instances",
-    defaultMessage: "Disable auto-exit when multiple hubs instances are open"
+    defaultMessage: "Отключение автовыхода при открытии нескольких экземпляров концентраторов"
   },
   disableIdleDetection: {
     id: "preferences-screen.preference.disable-idle-detection",
-    defaultMessage: "Disable auto-exit when idle or backgrounded"
+    defaultMessage: "Отключение автовыхода из системы в режиме ожидания или в фоновом режиме"
   },
   preferMobileObjectInfoPanel: {
     id: "preferences-screen.preference.prefer-mobile-object-info-panel",
-    defaultMessage: "Prefer Mobile Object Info Panel"
+    defaultMessage: "Предпочтительная информационная панель для мобильных объектов"
   },
   showRtcDebugPanel: {
     id: "preferences-screen.preference.show-rtc-debug-panel",
-    defaultMessage: "Show RTC Panel"
+    defaultMessage: "Показать панель RTC"
   },
   showAudioDebugPanel: {
     id: "preferences-screen.preference.show-audio-debug-panel",
-    defaultMessage: "Show Audio Debug Panel"
+    defaultMessage: "Показать панель отладки звука"
   },
   audioPanningQuality: {
     id: "preferences-screen.preference.audio-panning-quality",
-    defaultMessage: "Panning quality"
+    defaultMessage: "Качество панорамирования"
   },
   enableAudioClipping: {
     id: "preferences-screen.preference.enable-audio-clipping",
-    defaultMessage: "Enable Audio Clipping"
+    defaultMessage: "Включить обрезку звука"
   },
   audioClippingThreshold: {
     id: "preferences-screen.preference.audio-clipping-threshold",
-    defaultMessage: "Audio Clipping Threshold"
+    defaultMessage: "Порог обрезания звука"
   },
   theme: {
     id: "preferences-screen.preference.theme",
-    defaultMessage: "Theme"
+    defaultMessage: "Тема"
   },
   lazyLoadSceneMedia: {
     id: "preferences-screen.preference.lazy-load-scene-media",
-    defaultMessage: "Enable Scene Media Lazy Loading"
+    defaultMessage: "Включить ленивую загрузку мультимедиа сцены"
   },
   disableLeftRightPanning: {
     id: "preferences-screen.preference.disable-panning",
-    defaultMessage: "Disable audio left/right panning"
+    defaultMessage: "Отключение панорамирования звука влево/вправо"
   },
   cursorSize: {
     id: "preferences-screen.preference.cursor-size",
-    defaultMessage: "Cursor Size"
+    defaultMessage: "Размер курсора"
   },
   nametagVisibility: {
     id: "preferences-screen.preference.nametag-visibility",
-    defaultMessage: "Show Nametag"
+    defaultMessage: "Показать табличку с именем"
   },
   nametagVisibilityDistance: {
     id: "preferences-screen.preference.nametag-visibility-distance",
-    defaultMessage: "Nametag visibility distance"
+    defaultMessage: "Расстояние видимости бейджика"
   },
   enablePostEffects: {
     id: "preferences-screen.preference.enable-fx",
-    defaultMessage: "Enable Post Processing Effects (experimental)"
+    defaultMessage: "Включение эффектов постобработки (экспериментально)"
   },
   enablePostEffectsTooltip: {
     id: "preferences-screen.preference.enable-fx.tooltip",
-    defaultMessage: "This feature is still experimental and may have issues. It is currently unsupported in VR."
+    defaultMessage:
+      "Эта функция все еще является экспериментальной и может иметь проблемы. В настоящее время она не поддерживается в VR."
   },
   enableBloom: {
     id: "preferences-screen.preference.enable-fx-bloom",
-    defaultMessage: "Enable Bloom Effect"
+    defaultMessage: "Включить эффект цветения"
   },
   aaMode: {
     id: "preferences-screen.preference.fx-aa-mode",
-    defaultMessage: "Anti-Aliasing Mode"
+    defaultMessage: "Режим сглаживания"
   }
 });
 
@@ -697,13 +698,13 @@ const CATEGORY_ACCESSIBILITY = 5;
 const CATEGORY_GRAPHICS = 6;
 const TOP_LEVEL_CATEGORIES = [CATEGORY_AUDIO, CATEGORY_CONTROLS, CATEGORY_MISC];
 const categoryNames = defineMessages({
-  [CATEGORY_AUDIO]: { id: "preferences-screen.category.audio", defaultMessage: "Audio" },
-  [CATEGORY_CONTROLS]: { id: "preferences-screen.category.controls", defaultMessage: "Controls" },
-  [CATEGORY_MISC]: { id: "preferences-screen.category.misc", defaultMessage: "Misc" },
-  [CATEGORY_MOVEMENT]: { id: "preferences-screen.category.movement", defaultMessage: "Movement" },
-  [CATEGORY_TOUCHSCREEN]: { id: "preferences-screen.category.touchscreen", defaultMessage: "Touchscreen" },
-  [CATEGORY_ACCESSIBILITY]: { id: "preferences-screen.category.accessibility", defaultMessage: "Accessibility" },
-  [CATEGORY_GRAPHICS]: { id: "preferences-screen.category.graphics", defaultMessage: "Graphics" }
+  [CATEGORY_AUDIO]: { id: "preferences-screen.category.audio", defaultMessage: "Аудио" },
+  [CATEGORY_CONTROLS]: { id: "preferences-screen.category.controls", defaultMessage: "Управление" },
+  [CATEGORY_MISC]: { id: "preferences-screen.category.misc", defaultMessage: "Разное" },
+  [CATEGORY_MOVEMENT]: { id: "preferences-screen.category.movement", defaultMessage: "Движение" },
+  [CATEGORY_TOUCHSCREEN]: { id: "preferences-screen.category.touchscreen", defaultMessage: "Сенсорный экран" },
+  [CATEGORY_ACCESSIBILITY]: { id: "preferences-screen.category.accessibility", defaultMessage: "Доступность" },
+  [CATEGORY_GRAPHICS]: { id: "preferences-screen.category.graphics", defaultMessage: "Графика" }
 });
 
 function NavItem({ ariaLabel, title, onClick, selected }) {
@@ -835,7 +836,7 @@ class RefreshPrompt extends React.Component {
           <div className={styles.refreshPrompt}>
             <FormattedMessage
               id="preferences-screen.prompt-for-refresh"
-              defaultMessage="Your preferences are saved, but some of your changes will not take effect until you refresh the page."
+              defaultMessage="Ваши настройки сохраняются, но некоторые изменения не вступят в силу до тех пор, пока вы не обновите страницу."
             />
           </div>
           <div className={styles.warnIconPlaceholder} />
@@ -847,7 +848,7 @@ class RefreshPrompt extends React.Component {
             location.href = href;
           }}
         >
-          <FormattedMessage id="preferences-screen.refresh-now" defaultMessage="Refresh Now" />
+          <FormattedMessage id="preferences-screen.refresh-now" defaultMessage="Обновить сейчас" />
         </button>
       </div>
     );
@@ -940,21 +941,21 @@ class PreferencesScreen extends Component {
         value: "user",
         text: this.props.intl.formatMessage({
           id: "preferences-screen.preferred-camera.user-facing",
-          defaultMessage: "User-Facing"
+          defaultMessage: "Лицо пользователя"
         })
       },
       {
         value: "environment",
         text: this.props.intl.formatMessage({
           id: "preferences-screen.preferred-camera.environment",
-          defaultMessage: "Environment"
+          defaultMessage: "Окружающая среда"
         })
       },
       {
         value: "default",
         text: this.props.intl.formatMessage({
           id: "preferences-screen.preferred-camera.default",
-          defaultMessage: "Default"
+          defaultMessage: "По умолчанию"
         })
       }
     ];
@@ -1006,7 +1007,7 @@ class PreferencesScreen extends Component {
 
     const browserDefault = intl.formatMessage({
       id: "preferences-screen.browser-default",
-      defaultMessage: "Browser Default"
+      defaultMessage: "Браузер по умолчанию"
     });
 
     const availableLocales = [
@@ -1186,14 +1187,14 @@ class PreferencesScreen extends Component {
                 value: "High",
                 text: intl.formatMessage({
                   id: "preferences-screen.audio-panning-quality.high",
-                  defaultMessage: "High"
+                  defaultMessage: "Высокий"
                 })
               },
               {
                 value: "Low",
                 text: intl.formatMessage({
                   id: "preferences-screen.audio-panning-quality.low",
-                  defaultMessage: "Low"
+                  defaultMessage: "Низкий"
                 })
               }
             ]
@@ -1223,35 +1224,35 @@ class PreferencesScreen extends Component {
                       value: "showAll",
                       text: intl.formatMessage({
                         id: "preferences-screen.nametag-visibility.show-all",
-                        defaultMessage: "Always"
+                        defaultMessage: "Всегда"
                       })
                     },
                     {
                       value: "showNone",
                       text: intl.formatMessage({
                         id: "preferences-screen.nametag-visibility.show-none",
-                        defaultMessage: "Never"
+                        defaultMessage: "Никогда"
                       })
                     },
                     {
                       value: "showFrozen",
                       text: intl.formatMessage({
                         id: "preferences-screen.nametag-visibility.show-frozen",
-                        defaultMessage: "Only in Frozen state"
+                        defaultMessage: "Только в замороженном состоянии"
                       })
                     },
                     {
                       value: "showSpeaking",
                       text: intl.formatMessage({
                         id: "preferences-screen.nametag-visibility.show-speaking",
-                        defaultMessage: "Only speaking"
+                        defaultMessage: "Только говорить"
                       })
                     },
                     {
                       value: "showClose",
                       text: intl.formatMessage({
                         id: "preferences-screen.nametag-visibility.show-close",
-                        defaultMessage: "Close to me"
+                        defaultMessage: "Рядом со мной"
                       })
                     }
                   ]
@@ -1326,21 +1327,21 @@ class PreferencesScreen extends Component {
                 value: "low",
                 text: intl.formatMessage({
                   id: "preferences-screen.material-quality-setting.low",
-                  defaultMessage: "Low"
+                  defaultMessage: "Низкий"
                 })
               },
               {
                 value: "medium",
                 text: intl.formatMessage({
                   id: "preferences-screen.material-quality-setting.medium",
-                  defaultMessage: "Medium"
+                  defaultMessage: "Средний"
                 })
               },
               {
                 value: "high",
                 text: intl.formatMessage({
                   id: "preferences-screen.material-quality-setting.high",
-                  defaultMessage: "High"
+                  defaultMessage: "Высокий"
                 })
               }
             ],
@@ -1379,7 +1380,7 @@ class PreferencesScreen extends Component {
                 value: AAModes.NONE,
                 text: intl.formatMessage({
                   id: "preferences-screen.aa-mode.none",
-                  defaultMessage: "none"
+                  defaultMessage: "отсутствует"
                 })
               },
               {
@@ -1487,7 +1488,7 @@ class PreferencesScreen extends Component {
                 this.setState({ category });
               }}
               ariaLabel={intl.formatMessage(
-                { id: "preferences-screen.select-category ", defaultMessage: "Select category {categoryName}" },
+                { id: "preferences-screen.select-category ", defaultMessage: "Выберите категорию {categoryName}" },
                 {
                   categoryName: intl.formatMessage(categoryNames[category])
                 }

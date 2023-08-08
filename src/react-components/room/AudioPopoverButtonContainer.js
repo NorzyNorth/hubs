@@ -20,11 +20,11 @@ export const AudioPopoverButtonContainer = ({ scene, initiallyVisible }) => {
   const muteStatuses = defineMessages({
     mute: {
       id: "mute",
-      defaultMessage: "Mute"
+      defaultMessage: "Отключить звук"
     },
     unmute: {
       id: "unmute",
-      defaultMessage: "Unmute"
+      defaultMessage: "Включить звук"
     }
   });
 
@@ -45,7 +45,7 @@ export const AudioPopoverButtonContainer = ({ scene, initiallyVisible }) => {
           <ToolbarMicButton
             scene={scene}
             icon={isMicMuted || !canVoiceChat || micPermissionDenied ? <MicrophoneMutedIcon /> : <MicrophoneIcon />}
-            label={<FormattedMessage id="voice-button-container.label" defaultMessage="Voice" />}
+            label={<FormattedMessage id="voice-button-container.label" defaultMessage="Голос" />}
             preset="basic"
             onClick={toggleMute}
             statusColor={!micPermissionDenied && canVoiceChat ? (isMicMuted ? "disabled" : "enabled") : undefined}

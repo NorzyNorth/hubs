@@ -20,27 +20,27 @@ export const permissionsIcons = {
 export const permissionsMessages = defineMessages({
   voiceChatEnabled: {
     id: "chat-sidebar.moderator-message.voice-chat-enabled",
-    defaultMessage: "Voice chat has been turned on by a moderator"
+    defaultMessage: "Голосовой чат был включен модератором"
   },
   voiceChatDisabled: {
     id: "chat-sidebar.moderator-message.voice-chat-disabled",
-    defaultMessage: "Voice chat has been turned off by a moderator"
+    defaultMessage: "Голосовой чат был отключен модератором"
   },
   voiceChatDisabledMod: {
     id: "chat-sidebar.moderator-message.voice-chat-disabled-mod",
-    defaultMessage: "Guests are unable to use voice chat"
+    defaultMessage: "Гости не могут использовать голосовой чат"
   },
   textChatEnabled: {
     id: "chat-sidebar.moderator-message.text-chat-enabled",
-    defaultMessage: "Text chat has been turned on by a moderator"
+    defaultMessage: "Текстовый чат был включен модератором"
   },
   textChatDisabled: {
     id: "chat-sidebar.moderator-message.text-chat-disabled",
-    defaultMessage: "Text chat has been turned off by a moderator"
+    defaultMessage: "Текстовый чат был отключен модератором"
   },
   textChatDisabledMod: {
     id: "chat-sidebar.moderator-message.text-chat-disabled-mod",
-    defaultMessage: "Guests are unable to send chat messages"
+    defaultMessage: "Гости не могут отправлять сообщения в чат"
   }
 });
 

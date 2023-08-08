@@ -25,13 +25,13 @@ export function InviteLinkInputField({ fetchingInvite, inviteUrl, onRevokeInvite
 
   return (
     <CopyableTextInputField
-      label={<FormattedMessage id="invite-link-input-field.label" defaultMessage="Invite link" />}
+      label={<FormattedMessage id="invite-link-input-field.label" defaultMessage="Ссылка для приглашения" />}
       disabled={fetchingInvite}
       value={
         fetchingInvite
           ? intl.formatMessage({
               id: "invite-link-input-field.generating-invite",
-              defaultMessage: "Generating invite..."
+              defaultMessage: "Генерация приглашений..."
             })
           : inviteUrl
       }
@@ -40,18 +40,18 @@ export function InviteLinkInputField({ fetchingInvite, inviteUrl, onRevokeInvite
         !fetchingInvite &&
         (showRevokeConfirmation ? (
           <>
-            <FormattedMessage id="invite-link-input-field.revoke-confirm" defaultMessage="are you sure?" />{" "}
+            <FormattedMessage id="invite-link-input-field.revoke-confirm" defaultMessage="Вы уверены?" />{" "}
             <IconButton className={styles.confirmRevokeButton} onClick={confirmRevokeInvite}>
-              <FormattedMessage id="invite-link-input-field.revoke-confirm-yes" defaultMessage="yes" />
+              <FormattedMessage id="invite-link-input-field.revoke-confirm-yes" defaultMessage="да" />
             </IconButton>{" "}
             /{" "}
             <IconButton className={styles.confirmRevokeButton} onClick={cancelConfirmRevokeInvite}>
-              <FormattedMessage id="invite-link-input-field.revoke-confirm-no" defaultMessage="no" />
+              <FormattedMessage id="invite-link-input-field.revoke-confirm-no" defaultMessage="нет" />
             </IconButton>
           </>
         ) : (
           <IconButton className={styles.confirmRevokeButton} onClick={revokeInvite}>
-            <FormattedMessage id="invite-link-input-field.revoke" defaultMessage="revoke" />
+            <FormattedMessage id="invite-link-input-field.revoke" defaultMessage="отменить" />
           </IconButton>
         ))
       }

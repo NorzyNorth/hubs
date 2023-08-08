@@ -195,7 +195,7 @@ export function MediaTile({ entry, processThumbnailUrl, onClick, onEdit, onShowS
       <div className={styles.tileActions}>
         {entry.type === "avatar" && (
           <TileAction
-            title={intl.formatMessage({ id: "media-tile.action.edit-avatar", defaultMessage: "Edit avatar" })}
+            title={intl.formatMessage({ id: "media-tile.action.edit-avatar", defaultMessage: "Редактировать аватар" })}
             onClick={onEdit}
           >
             <PenIcon />
@@ -204,7 +204,7 @@ export function MediaTile({ entry, processThumbnailUrl, onClick, onEdit, onShowS
         {entry.type === "scene" && entry.project_id && (
           <TileAction
             onClick={onEdit}
-            title={intl.formatMessage({ id: "media-tile.action.edit-scene", defaultMessage: "Edit scene" })}
+            title={intl.formatMessage({ id: "media-tile.action.edit-scene", defaultMessage: "Редактирование сцены" })}
           >
             <PenIcon />
           </TileAction>
@@ -213,7 +213,7 @@ export function MediaTile({ entry, processThumbnailUrl, onClick, onEdit, onShowS
           <TileAction
             title={intl.formatMessage({
               id: "media-tile.action.show-similar-avatars",
-              defaultMessage: "Show similar avatars"
+              defaultMessage: "Показать похожие аватары"
             })}
             onClick={onShowSimilar}
           >
@@ -224,7 +224,7 @@ export function MediaTile({ entry, processThumbnailUrl, onClick, onEdit, onShowS
           <TileAction
             title={intl.formatMessage({
               id: "media-tile.action.copy-avatar",
-              defaultMessage: "Copy to my avatars"
+              defaultMessage: "Скопировать на свои аватары"
             })}
             onClick={onCopy}
           >
@@ -235,7 +235,7 @@ export function MediaTile({ entry, processThumbnailUrl, onClick, onEdit, onShowS
           <TileAction
             title={intl.formatMessage({
               id: "media-tile.action.copy-scene",
-              defaultMessage: "Copy to my scenes"
+              defaultMessage: "Копирование в мои сцены"
             })}
             onClick={onCopy}
           >
@@ -246,7 +246,7 @@ export function MediaTile({ entry, processThumbnailUrl, onClick, onEdit, onShowS
           <TileAction
             title={intl.formatMessage({
               id: "media-tile.action.room-info",
-              defaultMessage: "Room info"
+              defaultMessage: "Информация о номере"
             })}
             onClick={onInfo}
           >

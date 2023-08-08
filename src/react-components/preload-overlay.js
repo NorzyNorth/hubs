@@ -17,7 +17,7 @@ export default class PreloadOverlay extends Component {
   };
 
   render() {
-    const loadButtonText = <FormattedMessage id="preload-overlay.load-button" defaultMessage="Load Room" />;
+    const loadButtonText = <FormattedMessage id="preload-overlay.load-button" defaultMessage="Загрузка комнаты" />;
 
     return (
       <div className={styles.treatment}>
@@ -27,7 +27,7 @@ export default class PreloadOverlay extends Component {
         <a href="/" target="_blank" rel="noopener noreferrer" className={styles.logo}>
           <img
             src={configs.image("logo")}
-            alt={<FormattedMessage id="preload-overlay.logo-alt" defaultMessage="Logo" />}
+            alt={<FormattedMessage id="preload-overlay.logo-alt" defaultMessage="Логотип" />}
           />
         </a>
         <div className={styles.mainPanel}>

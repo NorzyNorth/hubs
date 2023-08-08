@@ -20,13 +20,13 @@ function InvitePopoverContent({ url, embed, inviteRequired, fetchingInvite, invi
       ) : (
         <>
           <CopyableTextInputField
-            label={<FormattedMessage id="invite-popover.room-link" defaultMessage="Room Link" />}
+            label={<FormattedMessage id="invite-popover.room-link" defaultMessage="Ссылка на комнату" />}
             value={url}
             buttonPreset="accent3"
           />
           {embed && (
             <CopyableTextInputField
-              label={<FormattedMessage id="invite-popover.embed-code" defaultMessage="Embed Code" />}
+              label={<FormattedMessage id="invite-popover.embed-code" defaultMessage="Код для вставки" />}
               value={embed}
               buttonPreset="accent5"
             />
@@ -48,12 +48,12 @@ InvitePopoverContent.propTypes = {
 
 const inviteTooltipDescription = defineMessage({
   id: "invite-tooltip.description",
-  defaultMessage: "Copy room link to invite others to the room"
+  defaultMessage: "Скопируйте ссылку на комнату, чтобы пригласить других в комнату"
 });
 
 const invitePopoverTitle = defineMessage({
   id: "invite-popover.title",
-  defaultMessage: "Invite"
+  defaultMessage: "Пригласить"
 });
 
 export function InvitePopoverButton({

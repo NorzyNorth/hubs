@@ -35,7 +35,7 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
 
   return (
     <Modal
-      title={<FormattedMessage id="object-url-modal.title" defaultMessage="Custom Object" />}
+      title={<FormattedMessage id="object-url-modal.title" defaultMessage="Пользовательский объект" />}
       beforeTitle={<CloseButton onClick={onClose} />}
     >
       <Column as="form" padding center onSubmit={handleSubmit(onSubmit)}>
@@ -43,7 +43,7 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
           {showModelCollectionLink ? (
             <FormattedMessage
               id="object-url-modal.message-with-collection"
-              defaultMessage="Upload or paste a link to an image, video, model, or scene. Models can be found on <sketchfablink>Sketchfab</sketchfablink> or in our <collectionlink>collection</collectionlink>."
+              defaultMessage="Загрузите или вставьте ссылку на изображение, видео, модель или сцену. Модели можно найти на <sketchfablink>Sketchfab</sketchfablink> или в нашей <collectionlink>коллекции</collectionlink>."
               values={{
                 // eslint-disable-next-line react/display-name
                 sketchfablink: chunks => (
@@ -66,7 +66,7 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
           ) : (
             <FormattedMessage
               id="object-url-modal.message"
-              defaultMessage="Upload or paste a link to an image, video, model, or scene. Models can be found on <sketchfablink>Sketchfab</sketchfablink>."
+              defaultMessage="Загрузите или вставьте ссылку на изображение, видео, модель или сцену. Модели можно найти на <sketchfablink>Sketchfab</sketchfablink>."
               values={{
                 // eslint-disable-next-line react/display-name
                 sketchfablink: chunks => (
@@ -83,7 +83,7 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
           )}
         </p>
         <TextInputField
-          label={<FormattedMessage id="object-url-modal.url-field-label" defaultMessage="Object URL or File" />}
+          label={<FormattedMessage id="object-url-modal.url-field-label" defaultMessage="URL объекта или файла" />}
           placeholder="https://example.com/avatar.glb"
           type={hasFile ? "text" : "url"}
           value={fileName || url || ""}
@@ -102,7 +102,7 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
                 {!showCloseButton && (
                   <div className={styles.browse}>
                     <span>
-                      <FormattedMessage id="object-url-modal.browse" defaultMessage="Browse" />
+                      <FormattedMessage id="object-url-modal.browse" defaultMessage="Просмотреть" />
                     </span>
                   </div>
                 )}
@@ -118,7 +118,7 @@ export function ObjectUrlModal({ showModelCollectionLink, modelCollectionUrl, on
           }
         />
         <Button type="submit" preset="accent4">
-          <FormattedMessage id="object-url-modal.create-object-button" defaultMessage="Create Object" />
+          <FormattedMessage id="object-url-modal.create-object-button" defaultMessage="Создать объект" />
         </Button>
       </Column>
     </Modal>

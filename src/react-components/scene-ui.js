@@ -42,7 +42,7 @@ class SceneUI extends Component {
         <div className={styles.ui}>
           <div className={styles.unavailable}>
             <div>
-              <FormattedMessage id="scene-page.unavailable" defaultMessage="This scene is no longer available." />
+              <FormattedMessage id="scene-page.unavailable" defaultMessage="Эта сцена больше не доступна." />
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ class SceneUI extends Component {
       tweetText
     )}`;
 
-    const unknown = intl.formatMessage({ id: "scene-page.unknown", defaultMessage: "unknown" });
+    const unknown = intl.formatMessage({ id: "scene-page.unknown", defaultMessage: "неизвестно" });
 
     let attributions;
 
@@ -154,7 +154,7 @@ class SceneUI extends Component {
               {this.props.sceneAttributions.creator ? (
                 <FormattedMessage
                   id="scene-page.scene-attribution"
-                  defaultMessage="by {creator}"
+                  defaultMessage="От {creator}"
                   values={{ creator: this.props.sceneAttributions.creator || unknown }}
                 />
               ) : (
@@ -199,7 +199,7 @@ class SceneUI extends Component {
             <div className={styles.scenePreviewButtonWrapper}>
               {this.props.showCreateRoom && (
                 <button className={styles.scenePreviewButton} onClick={this.createRoom}>
-                  <FormattedMessage id="scene-page.create-button" defaultMessage="Create a room with this scene" />
+                  <FormattedMessage id="scene-page.create-button" defaultMessage="Создайте комнату с этой сценой" />
                 </button>
               )}
               <IfFeature name="enable_spoke">
@@ -238,7 +238,7 @@ class SceneUI extends Component {
               <a href={tweetLink} rel="noopener noreferrer" target="_blank" className={styles.scenePreviewButton}>
                 <Twitter />
                 <div>
-                  <FormattedMessage id="scene-page.tweet-button" defaultMessage="Share on Twitter" />
+                  <FormattedMessage id="scene-page.tweet-button" defaultMessage="Поделиться в Twitter" />
                 </div>
               </a>
             </div>

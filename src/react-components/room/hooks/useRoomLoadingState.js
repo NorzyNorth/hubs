@@ -39,24 +39,24 @@ function reducer(state, action) {
 const messages = defineMessages({
   default: {
     id: "loading-screen.default",
-    description: "The scene has started loading.",
-    defaultMessage: "Loading scene..."
+    description: "Началась загрузка сцены.",
+    defaultMessage: "Загрузка сцены..."
   },
   loadingObjects: {
     id: "loading-screen.loading-objects",
-    description: "The loading progress. How many objects have finished loading?",
-    defaultMessage: "Loading objects {loadedCount}/{objectCount}"
+    description: "Ход загрузки. Сколько объектов закончили загрузку?",
+    defaultMessage: "Загрузка объектов{loadedCount}/{objectCount}"
   },
   connectingScene: {
     id: "loading-screen.connecting",
-    description: "The scene is loaded, we are waiting for the networked scene to be connected to enter.",
-    defaultMessage: "Connecting to the scene..."
+    description: "Сцена загружена, мы ждем подключения сетевой сцены для входа.",
+    defaultMessage: "Подключение к сцене..."
   },
   enteringRoom: {
     id: "loading-screen.entering-room",
     description:
-      "Once the scene has finished loading, this message tells users that they will be entering the room shortly.",
-    defaultMessage: "Entering room..."
+      "После завершения загрузки сцены это сообщение сообщает пользователям о том, что они скоро войдут в комнату.",
+    defaultMessage: "Входим в комнату..."
   }
 });
 

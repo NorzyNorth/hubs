@@ -24,7 +24,7 @@ function MyMenuItems({ onOpenProfile }) {
     <ObjectMenuButton onClick={onOpenProfile}>
       <AvatarIcon />
       <span>
-        <FormattedMessage id="object-menu.edit-avatar-button" defaultMessage="Edit Avatar" />
+        <FormattedMessage id="object-menu.edit-avatar-button" defaultMessage="Редактировать аватар" />
       </span>
     </ObjectMenuButton>
   );
@@ -46,7 +46,7 @@ function PlayerMenuItems({ hubChannel, activeObject, deselectObject }) {
     >
       <HideIcon />
       <span>
-        <FormattedMessage id="object-menu.hide-avatar-button" defaultMessage="Hide" />
+        <FormattedMessage id="object-menu.hide-avatar-button" defaultMessage="Скрыть" />
       </span>
     </ObjectMenuButton>
   );
@@ -70,9 +70,9 @@ function ObjectMenuItems({ hubChannel, scene, activeObject, deselectObject, onGo
         <PinIcon />
         <span>
           {isPinned ? (
-            <FormattedMessage id="object-menu.unpin-object-button" defaultMessage="Unpin" />
+            <FormattedMessage id="object-menu.unpin-object-button" defaultMessage="Открепить" />
           ) : (
-            <FormattedMessage id="object-menu.pin-object-button" defaultMessage="Pin" />
+            <FormattedMessage id="object-menu.pin-object-button" defaultMessage="Прикрепить" />
           )}
         </span>
       </ObjectMenuButton>
@@ -80,7 +80,7 @@ function ObjectMenuItems({ hubChannel, scene, activeObject, deselectObject, onGo
         <ObjectMenuButton as="a" href={url} target="_blank" rel="noopener noreferrer">
           <LinkIcon />
           <span>
-            <FormattedMessage id="object-menu.object-link-button" defaultMessage="Link" />
+            <FormattedMessage id="object-menu.object-link-button" defaultMessage="Ссылка" />
           </span>
         </ObjectMenuButton>
       )}
@@ -94,7 +94,7 @@ function ObjectMenuItems({ hubChannel, scene, activeObject, deselectObject, onGo
       >
         <GoToIcon />
         <span>
-          <FormattedMessage id="object-menu.view-object-button" defaultMessage="View" />
+          <FormattedMessage id="object-menu.view-object-button" defaultMessage="Посмотреть" />
         </span>
       </ObjectMenuButton>
       <ObjectMenuButton
@@ -106,7 +106,7 @@ function ObjectMenuItems({ hubChannel, scene, activeObject, deselectObject, onGo
       >
         <DeleteIcon />
         <span>
-          <FormattedMessage id="object-menu.delete-object-button" defaultMessage="Delete" />
+          <FormattedMessage id="object-menu.delete-object-button" defaultMessage="Удалить" />
         </span>
       </ObjectMenuButton>
     </>
@@ -145,7 +145,7 @@ export function ObjectMenuContainer({ hubChannel, scene, onOpenProfile, onGoToOb
 
   return (
     <ObjectMenu
-      title={<FormattedMessage id="object-menu.title" defaultMessage="Object" />}
+      title={<FormattedMessage id="object-menu.title" defaultMessage="Объект" />}
       currentObjectIndex={objects.indexOf(activeObject)}
       objectCount={objects.length}
       onClose={deselectObject}

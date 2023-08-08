@@ -137,11 +137,11 @@ class LinkRoot extends Component {
                 {this.state.failedAtLeastOnce ? (
                   <FormattedMessage
                     id="link-page.try-again"
-                    defaultMessage="We couldn't find that code.{linebreak}Please try again."
+                    defaultMessage="Мы не смогли найти этот код.{linebreak}Пожалуйста, попробуйте еще раз."
                     values={{ linebreak: <br /> }}
                   />
                 ) : (
-                  <FormattedMessage id="link-page.enter-code" defaultMessage="Enter code:" />
+                  <FormattedMessage id="link-page.enter-code" defaultMessage="Введите код:" />
                 )}
               </div>
 
@@ -190,7 +190,7 @@ class LinkRoot extends Component {
 
             <div className={styles.createLink}>
               <a href="/">
-                <FormattedMessage id="link-page.create-room-button" defaultMessage="Create a new room" />
+                <FormattedMessage id="link-page.create-room-button" defaultMessage="Создать новую комнату" />
               </a>
             </div>
           </div>

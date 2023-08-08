@@ -36,7 +36,7 @@ export const AudioPopoverContent = ({
       {(canVoiceChat && (
         <>
           <p style={{ alignSelf: "start" }}>
-            <FormattedMessage id="mic-setup-modal.microphone-text" defaultMessage="Microphone" />
+            <FormattedMessage id="mic-setup-modal.microphone-text" defaultMessage="Микрофон" />
           </p>
           {isAudioInputSelectAvailable && (
             <SelectInputField
@@ -56,7 +56,7 @@ export const AudioPopoverContent = ({
           </Row>
           <Row nowrap>
             <ToggleInput
-              label={<FormattedMessage id="mic-setup-modal.mute-mic-toggle-v2" defaultMessage="Mute" />}
+              label={<FormattedMessage id="mic-setup-modal.mute-mic-toggle-v2" defaultMessage="Отключить звук" />}
               checked={isMicrophoneMuted}
               onChange={onChangeMicrophoneMuted}
             />
@@ -68,7 +68,7 @@ export const AudioPopoverContent = ({
           <p className={styles.textDisabled}>
             <FormattedMessage
               id="mic-setup-modal.voice-chat-disabled"
-              defaultMessage="Voice chat is <bold>turned off</bold> for this room."
+              defaultMessage="Голосовой чат <bold>отключен</bold> для этой комнаты."
               values={{
                 bold: str => <b>{str}</b>
               }}
@@ -78,7 +78,7 @@ export const AudioPopoverContent = ({
       )}
       <Divider />
       <p style={{ alignSelf: "start" }}>
-        <FormattedMessage id="mic-setup-modal.speakers-text" defaultMessage="Speakers" />
+        <FormattedMessage id="mic-setup-modal.speakers-text" defaultMessage="Спикеры" />
       </p>
       {permissionStatus === PermissionStatus.GRANTED && isAudioOutputSelectAvailable && (
         <SelectInputField
@@ -93,7 +93,7 @@ export const AudioPopoverContent = ({
         <> {speakerLevelBar} </>
       </Row>
       <Button preset="basic" onClick={onPlaySound} sm>
-        <FormattedMessage id="mic-setup-modal.test-audio-button" defaultMessage="Test Audio" />
+        <FormattedMessage id="mic-setup-modal.test-audio-button" defaultMessage="Тест Аудио" />
       </Button>
     </Column>
   );

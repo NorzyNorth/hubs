@@ -27,7 +27,7 @@ export function Token({ tokenInfo, onRevokeToken }) {
   const { type = null } = tokenTypes[subject_type];
   if (type === null) {
     console.warn(
-      "WARNING: Token type translation was undefined. Meaning the frontend is missing the token type translation for: " +
+      "WARNING: Перевод типа токена не был определен. Это означает, что во фронтенде отсутствует перевод типа токена для: " +
         subject_type
     );
   }
@@ -49,7 +49,7 @@ export function Token({ tokenInfo, onRevokeToken }) {
           </div>
         </Row>
         <Button sm preset="cancel" onClick={onRevokeToken}>
-          <FormattedMessage id="tokens.revoke-token" defaultMessage="Revoke" />
+          <FormattedMessage id="tokens.revoke-token" defaultMessage="Отозвать" />
         </Button>
       </Row>
       <Row padding="sm" className={styles.backgroundGrey}>

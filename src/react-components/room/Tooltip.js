@@ -39,56 +39,55 @@ if (window.navigator.keyboard !== undefined && window.navigator.keyboard.getLayo
 const onboardingMessages = defineMessages({
   "tips.welcome": {
     id: "tips.welcome",
-    defaultMessage:
-      "<h2>Welcome to {appName}</h2><p>Let's take a quick look to get comfortable</p><p2>with the controls</p2>"
+    defaultMessage: "<h2>Приветствуем вас в {appName}</h2><p>Давайте посмотрим, как устроено управление</p><p2>."
   },
   "tips.mobile.locomotion": {
     id: "tips.mobile.locomotion2",
-    defaultMessage: "<p>Move around by pinching with two fingers</p><p2>or with the on-screen joysticks</p2>"
+    defaultMessage: "<p>Передвигайтесь с помощью двух пальцев</p><p2>или с помощью экранных джойстиков</p2>."
   },
   "tips.mobile.turning": {
     id: "tips.mobile.turning",
-    defaultMessage: "Tap and drag to look around"
+    defaultMessage: "Нажмите и перетащите, чтобы осмотреться"
   },
   "tips.desktop.locomotion": {
     id: "tips.desktop.locomotion2",
-    defaultMessage: "<p>Move around with</p> {wasd} or {arrows}"
+    defaultMessage: "<p>Перемещайтесь с помощью</p> {wasd} или {arrows}"
   },
   "tips.desktop.turning": {
     id: "tips.desktop.turning2",
-    defaultMessage: "Use {left} or {right} or click and drag to look around"
+    defaultMessage: "Используйте {left} или {right} или щелкните и перетащите, чтобы осмотреться"
   },
   "tips.desktop.invite": {
     id: "tips.desktop.invite2",
-    defaultMessage: "<p>Use the {invite} button to share</p><p2>this room</p2>"
+    defaultMessage: "<p>Пользуйтесь кнопкой {invite}, чтобы поделиться</p><p2>этой комнатой</p2>"
   },
   "tips.end": {
     id: "tips.end",
-    defaultMessage: "Tutorial completed! Have fun exploring"
+    defaultMessage: "Учебник завершен! Приятного изучения"
   },
   "tips.menu": {
     id: "tips.menu",
-    defaultMessage: "Access the tour from the {menu} menu"
+    defaultMessage: "Доступ к туру осуществляется из меню {menu}"
   },
   "tips.buttons.get-started": {
     id: "tips.buttons.get-started",
-    defaultMessage: "Get started"
+    defaultMessage: "Приступить к работе"
   },
   "tips.buttons.skip-tour": {
     id: "tips.buttons.skip-tour",
-    defaultMessage: "Skip tour"
+    defaultMessage: "Пропустить экскурсию"
   },
   "tips.buttons.done": {
     id: "tips.buttons.done",
-    defaultMessage: "Done"
+    defaultMessage: "Выполнено"
   },
   "tips.text.more": {
     id: "tips.text.more",
-    defaultMessage: "More"
+    defaultMessage: "Больше"
   },
   "tips.text.invite": {
     id: "tips.text.invite",
-    defaultMessage: "Invite"
+    defaultMessage: "Пригласить"
   }
 });
 

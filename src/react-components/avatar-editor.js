@@ -23,7 +23,7 @@ import dropdownArrow2xUrl from "../assets/images/dropdown_arrow@2x.png";
 const delistAvatarInfoMessage = defineMessage({
   id: "avatar-editor.delist-avatar-info",
   defaultMessage:
-    "Other users already using this avatar will still be able to use it, but it will be removed from 'My Avatars' and search results."
+    "Другие пользователи, уже использующие этот аватар, по-прежнему смогут им пользоваться, но он будет удален из раздела Мои аватары и результатов поиска."
 });
 
 const AVATARS_API = "/api/v1/avatars";
@@ -36,12 +36,8 @@ const useAllowedEditors = true;
 const allowedEditors = [
   ...defaultEditors,
   {
-    name: "Skindex Editor",
-    url: "https://www.minecraftskins.com/skin-editor"
-  },
-  {
-    name: "MinecraftSkins.net Editor",
-    url: "https://www.minecraftskins.net/skineditor"
+    name: "Отсуствует",
+    url: "https://google.com"
   }
 ];
 
@@ -486,7 +482,7 @@ class AvatarEditor extends Component {
                 {debug &&
                   this.textField(
                     "avatar_id",
-                    intl.formatMessage({ id: "avatar-editor.field.avatar-id", defaultMessage: "Avatar ID" }),
+                    intl.formatMessage({ id: "avatar-editor.field.avatar-id", defaultMessage: "ID аватара" }),
                     true
                   )}
                 {debug &&
@@ -494,7 +490,7 @@ class AvatarEditor extends Component {
                     "parent_avatar_id",
                     intl.formatMessage({
                       id: "avatar-editor.field.parent-avatar-id",
-                      defaultMessage: "Parent Avatar ID"
+                      defaultMessage: "ID родительского аватара"
                     })
                   )}
                 {debug &&
@@ -502,7 +498,7 @@ class AvatarEditor extends Component {
                     "parent_avatar_listing_id",
                     intl.formatMessage({
                       id: "avatar-editor.field.parent-avatar-listing-id",
-                      defaultMessage: "Parent Avatar Listing ID"
+                      defaultMessage: "ID родительского списка аватаров"
                     })
                   )}
                 {debug &&
@@ -510,7 +506,7 @@ class AvatarEditor extends Component {
                     "description",
                     intl.formatMessage({
                       id: "avatar-editor.field.description",
-                      defaultMessage: "Description"
+                      defaultMessage: "Описание"
                     })
                   )}
                 {!this.props.avatarId &&
@@ -518,12 +514,12 @@ class AvatarEditor extends Component {
                     "parent_avatar_listing_id",
                     intl.formatMessage({
                       id: "avatar-editor.field.model",
-                      defaultMessage: "Model"
+                      defaultMessage: "Модель"
                     })
                   )}
 
                 <label>
-                  <FormattedMessage id="avatar-editor.skin-section" defaultMessage="Skin" />
+                  <FormattedMessage id="avatar-editor.skin-section" defaultMessage="Скин" />
                 </label>
                 {this.mapField(
                   "base_map",
@@ -535,13 +531,13 @@ class AvatarEditor extends Component {
                 )}
                 <details>
                   <summary>
-                    <FormattedMessage id="avatar-editor.advanced-section" defaultMessage="Advanced" />
+                    <FormattedMessage id="avatar-editor.advanced-section" defaultMessage="Расширенная версия" />
                   </summary>
                   {this.mapField(
                     "emissive_map",
                     intl.formatMessage({
                       id: "avatar-editor.field.emissive-map",
-                      defaultMessage: "Emissive Map"
+                      defaultMessage: "Эмиссионная карта"
                     }),
                     "image/*"
                   )}
@@ -549,7 +545,7 @@ class AvatarEditor extends Component {
                     "normal_map",
                     intl.formatMessage({
                       id: "avatar-editor.field.normal-map",
-                      defaultMessage: "Normal Map"
+                      defaultMessage: "Нормальная карта"
                     }),
                     "image/*"
                   )}
@@ -557,26 +553,27 @@ class AvatarEditor extends Component {
                     "orm_map",
                     intl.formatMessage({
                       id: "avatar-editor.field.orm-map",
-                      defaultMessage: "ORM Map"
+                      defaultMessage: "Карта ОРМ"
                     }),
                     "image/*",
                     false,
                     intl.formatMessage({
                       id: "avatar-editor.field.orm-map-info",
-                      defaultMessage: "Occlussion (r), Roughness (g), Metallic (b)"
+                      defaultMessage: "Окклюзия (r), шероховатость (g), металличность (b)"
                     })
                   )}
                 </details>
 
                 <label>
-                  <FormattedMessage id="avatar-editor.share-settings" defaultMessage="Share Settings" />
+                  <FormattedMessage id="avatar-editor.share-settings" defaultMessage="Настройки обмена" />
                 </label>
                 {this.checkbox(
                   "allow_promotion",
                   intl.formatMessage(
                     {
                       id: "avatar-editor.field.allow-promotion",
-                      defaultMessage: "Allow {companyName} to promote your avatar, and show it in search results."
+                      defaultMessage:
+                        "Разрешите {companyName} рекламировать ваш аватар и показывать его в результатах поиска."
                     },
                     { companyName: configs.translation("company-name") }
                   ),
@@ -602,12 +599,13 @@ class AvatarEditor extends Component {
                   "allow_remixing",
                   intl.formatMessage({
                     id: "avatar-editor.field.allow-remixing",
-                    defaultMessage: "Allow others to edit and re-publish your avatar as long as they give you credit."
+                    defaultMessage:
+                      "Разрешите другим редактировать и переиздавать ваш аватар при условии, что они укажут ваше авторство."
                   }),
                   <span>
                     <FormattedMessage
                       id="avatar-editor.field.allow-remixing-checkbox"
-                      defaultMessage="Allow <a>Remixing</a> <license>(under <licenselink>CC-BY 3.0</licenselink>)</license>"
+                      defaultMessage="Разрешить <a>ремикширование</a> <license>(under <licenselink>CC-BY 3.0</licenselink>)</license>"
                       values={{
                         a: chunks => (
                           <a
@@ -636,7 +634,7 @@ class AvatarEditor extends Component {
                   "creatorAttribution",
                   intl.formatMessage({
                     id: "avatar-editor.field.creator-attribution",
-                    defaultMessage: "Attribution (optional)"
+                    defaultMessage: "Атрибуция (необязательно)"
                   }),
                   false,
                   false
@@ -658,7 +656,7 @@ class AvatarEditor extends Component {
                 <p>
                   <FormattedMessage
                     id="avatar-editor.external-editor-info"
-                    defaultMessage="Create a custom skin for this avatar:"
+                    defaultMessage="Создайте пользовательский скин для этого аватара:"
                   />{" "}
                   {this.state.editorLinks.map(({ name, url }) => (
                     <a
@@ -676,7 +674,7 @@ class AvatarEditor extends Component {
                 <p>
                   <FormattedMessage
                     id="avatar-editor.info"
-                    defaultMessage="Find more custom avatar resources <a>here</a>"
+                    defaultMessage="Найти другие ресурсы по созданию аватаров можно <a>здесь</a>"
                     values={{
                       a: chunks => (
                         <a
@@ -695,9 +693,9 @@ class AvatarEditor extends Component {
             <div>
               <button disabled={this.state.uploading} className="form-submit" type="submit">
                 {this.state.uploading ? (
-                  <FormattedMessage id="avatar-editor.submit-button.uploading" defaultMessage="Uploading..." />
+                  <FormattedMessage id="avatar-editor.submit-button.uploading" defaultMessage="Загрузка..." />
                 ) : (
-                  <FormattedMessage id="avatar-editor.submit-button.save" defaultMessage="Save" />
+                  <FormattedMessage id="avatar-editor.submit-button.save" defaultMessage="Сохранить" />
                 )}
               </button>
             </div>
@@ -710,11 +708,11 @@ class AvatarEditor extends Component {
                       defaultMessage="Are you sure?"
                     />{" "}
                     <a onClick={this.deleteAvatar}>
-                      <FormattedMessage id="avatar-editor.delete-avatar.confirm" defaultMessage="yes" />
+                      <FormattedMessage id="avatar-editor.delete-avatar.confirm" defaultMessage="да" />
                     </a>{" "}
                     /{" "}
                     <a onClick={() => this.setState({ confirmDelete: false })}>
-                      <FormattedMessage id="avatar-editor.delete-avatar.cancel" defaultMessage="no" />
+                      <FormattedMessage id="avatar-editor.delete-avatar.cancel" defaultMessage="нет" />
                     </a>
                   </span>
                 ) : (
@@ -723,9 +721,12 @@ class AvatarEditor extends Component {
                     title={avatar.has_listings ? intl.formatMessage(delistAvatarInfoMessage) : ""}
                   >
                     {avatar.has_listings ? (
-                      <FormattedMessage id="avatar-editor.delist-avatar-button" defaultMessage="Delist Avatar" />
+                      <FormattedMessage
+                        id="avatar-editor.delist-avatar-button"
+                        defaultMessage="Удалить аватар из списка"
+                      />
                     ) : (
-                      <FormattedMessage id="avatar-editor.delete-avatar-button" defaultMessage="Delete Avatar" />
+                      <FormattedMessage id="avatar-editor.delete-avatar-button" defaultMessage="Удалить аватар" />
                     )}
                   </a>
                 )}

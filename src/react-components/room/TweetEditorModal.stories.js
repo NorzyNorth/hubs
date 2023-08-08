@@ -14,7 +14,7 @@ export default {
 
 export const Image = () => {
   const editorRef = useRef();
-  const [editorState, setEditorState] = useState(() => createEditorStateWithText("Example tweet"));
+  const [editorState, setEditorState] = useState(() => createEditorStateWithText("Пример твита"));
 
   return (
     <RoomLayout
@@ -34,7 +34,7 @@ export const Image = () => {
 
 export const Video = () => {
   const editorRef = useRef();
-  const [editorState, setEditorState] = useState(() => createEditorStateWithText("Example tweet"));
+  const [editorState, setEditorState] = useState(() => createEditorStateWithText("Пример твита"));
 
   return (
     <RoomLayout

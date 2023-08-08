@@ -9,12 +9,12 @@ export default {
 };
 
 const infoMessages = [
-  { heading: "Tip:", message: "Press the Q & E keys to turn left and right." },
+  { heading: "Подсказка:", message: "Нажимайте клавиши Q и E для поворота влево и вправо." },
   {
-    heading: "What's New?",
+    heading: "Что нового?",
     message: (
       <>
-        You can now set the default locale in your preferences.{" "}
+        Теперь в настройках можно установить локаль по умолчанию.{" "}
         <a href="#" target="_blank">
           Read More
         </a>

@@ -19,11 +19,11 @@ import { ToolTip } from "@mozilla/lilypad-ui";
 export const titleMessages = defineMessages({
   microphoneSetup: {
     id: "mic-setup-modal.title",
-    defaultMessage: "Microphone Setup"
+    defaultMessage: "Настройка микрофона"
   },
   audioSetup: {
     id: "mic-setup-modal.title-audio",
-    defaultMessage: "Audio Setup"
+    defaultMessage: "Настройка звука"
   }
 });
 
@@ -58,10 +58,7 @@ export function MicSetupModal({
     >
       <Column center padding grow className={styles.content}>
         <p>
-          <FormattedMessage
-            id="mic-setup-modal.check-mic"
-            defaultMessage="Check your microphone and audio before entering."
-          />
+          <FormattedMessage id="mic-setup-modal.check-mic" defaultMessage="Перед входом проверьте микрофон и звук." />
         </p>
         <div className={styles.audioCheckContainer}>
           <div className={styles.audioIoContainer}>
@@ -86,14 +83,16 @@ export function MicSetupModal({
                   {permissionStatus === PermissionStatus.GRANTED ? (
                     <>
                       <ToggleInput
-                        label={<FormattedMessage id="mic-setup-modal.mute-mic-toggle-v2" defaultMessage="Mute" />}
+                        label={
+                          <FormattedMessage id="mic-setup-modal.mute-mic-toggle-v2" defaultMessage="Отключить звук" />
+                        }
                         checked={isMicrophoneMuted}
                         onChange={onChangeMicrophoneMuted}
                       />
                       <ToolTip
                         location="right"
                         category="primary"
-                        description="Toggle mic on/off anytime after you enter the room (M)"
+                        description="Включение/выключение микрофона в любое время после входа в комнату (M)"
                       >
                         <InfoIcon className={styles.infoIcon} />
                       </ToolTip>
@@ -103,7 +102,7 @@ export function MicSetupModal({
                       <p>
                         <FormattedMessage
                           id="mic-setup-modal.mic-permission-prompt"
-                          defaultMessage="Requesting access to your microphone..."
+                          defaultMessage="Запрос доступа к вашему микрофону..."
                         />
                       </p>
                     )) ||
@@ -112,13 +111,13 @@ export function MicSetupModal({
                         <span className={styles.errorTitle}>
                           <FormattedMessage
                             id="mic-setup-modal.error-title"
-                            defaultMessage="Microphone access was blocked."
+                            defaultMessage="Доступ к микрофону был заблокирован."
                             className={styles.errorTitle}
                           />
                         </span>{" "}
                         <FormattedMessage
                           id="mic-setup-modal.error-description"
-                          defaultMessage="To talk in Hubs you will need to allow microphone access."
+                          defaultMessage="Чтобы разговаривать в концентраторах, необходимо разрешить доступ к микрофону."
                         />
                       </p>
                     ))
@@ -127,7 +126,7 @@ export function MicSetupModal({
                 {permissionStatus === PermissionStatus.GRANTED && isAudioInputSelectAvailable && (
                   <div className={styles.selectionContainer}>
                     <p style={{ alignSelf: "start" }}>
-                      <FormattedMessage id="mic-setup-modal.microphone-text" defaultMessage="Microphone" />
+                      <FormattedMessage id="mic-setup-modal.microphone-text" defaultMessage="Микрофон" />
                     </p>
                     <SelectInputField
                       className={styles.selectionInput}
@@ -144,7 +143,7 @@ export function MicSetupModal({
                 <p className={styles.textDisabled}>
                   <FormattedMessage
                     id="mic-setup-modal.voice-chat-disabled"
-                    defaultMessage="Voice chat is <bold>turned off</bold> for this room."
+                    defaultMessage="Голосовой чат <bold>отключен</bold> для этой комнаты."
                     values={{
                       bold: str => <b>{str}</b>
                     }}
@@ -160,13 +159,13 @@ export function MicSetupModal({
             </div>
             <div className={styles.actionContainer}>
               <Button preset="basic" onClick={onPlaySound} sm>
-                <FormattedMessage id="mic-setup-modal.test-audio-button" defaultMessage="Test Audio" />
+                <FormattedMessage id="mic-setup-modal.test-audio-button" defaultMessage="Тестовое аудио" />
               </Button>
             </div>
             {permissionStatus === PermissionStatus.GRANTED && isAudioOutputSelectAvailable && (
               <div className={styles.selectionContainer}>
                 <p style={{ alignSelf: "start" }}>
-                  <FormattedMessage id="mic-setup-modal.speakers-text" defaultMessage="Speakers" />
+                  <FormattedMessage id="mic-setup-modal.speakers-text" defaultMessage="Динамики" />
                 </p>
                 <SelectInputField
                   onChange={onChangeSpeaker}
@@ -179,7 +178,7 @@ export function MicSetupModal({
           </div>
         </div>
         <Button preset="primary" onClick={onEnterRoom}>
-          <FormattedMessage id="mic-setup-modal.enter-room-button" defaultMessage="Enter Room" />
+          <FormattedMessage id="mic-setup-modal.enter-room-button" defaultMessage="Вход в комнату" />
         </Button>
       </Column>
     </Modal>

@@ -17,7 +17,7 @@ export function SceneUrlModal({ enableSpoke, editorName, onValidateUrl, onSubmit
   } = useForm();
   return (
     <Modal
-      title={<FormattedMessage id="scene-url-modal.title" defaultMessage="Custom Scene URL" />}
+      title={<FormattedMessage id="scene-url-modal.title" defaultMessage="URL пользовательской сцены" />}
       beforeTitle={<CloseButton onClick={onClose} />}
     >
       <Column as="form" padding center onSubmit={handleSubmit(onSubmit)}>
@@ -25,7 +25,7 @@ export function SceneUrlModal({ enableSpoke, editorName, onValidateUrl, onSubmit
           {enableSpoke ? (
             <FormattedMessage
               id="scene-url-modal.message-with-spoke"
-              defaultMessage="Paste a URL to a {editorName} scene or a URL to a <glblink>GLB</glblink>."
+              defaultMessage="Вставьте URL-адрес сцены {editorName} или URL-адрес <glblink>GLB</glblink>."
               values={{
                 editorName: (
                   <a href="/spoke" target="_blank" rel="noopener noreferrer">
@@ -43,7 +43,7 @@ export function SceneUrlModal({ enableSpoke, editorName, onValidateUrl, onSubmit
           ) : (
             <FormattedMessage
               id="scene-url-modal.message"
-              defaultMessage="Paste a URL to a scene or a URL to a <glblink>GLB</glblink>."
+              defaultMessage="Вставьте URL-адрес сцены или URL-адрес <glblink>GLB</glblink>."
               values={{
                 // eslint-disable-next-line react/display-name
                 glblink: chunks => (
@@ -63,21 +63,21 @@ export function SceneUrlModal({ enableSpoke, editorName, onValidateUrl, onSubmit
           error={errors?.url?.message}
         />
         <Button type="submit" preset="accept" disabled={isSubmitting}>
-          <FormattedMessage id="scene-url-modal.change-scene-button" defaultMessage="Change Scene" />
+          <FormattedMessage id="scene-url-modal.change-scene-button" defaultMessage="Смена сцены" />
         </Button>
         {enableSpoke && (
           <>
             <p>
               <FormattedMessage
                 id="scene-url-modal.create-in-spoke"
-                defaultMessage="Or, create a new scene using {editorName}."
+                defaultMessage="Или создайте новую сцену, используя {editorName}."
                 values={{ editorName }}
               />
             </p>
             <Button as="a" preset="primary" href="/spoke/new" target="_blank" rel="noopener noreferrer">
               <FormattedMessage
                 id="scene-url-modal.new-spoke-project-button"
-                defaultMessage="Launch {editorName}"
+                defaultMessage="Запуск {editorName}"
                 values={{ editorName }}
               />
             </Button>

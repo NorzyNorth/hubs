@@ -17,11 +17,11 @@ import { MediaGrid } from "./MediaGrid";
 
 const navTitleMessages = defineMessages({
   youtube: { id: "media-browser.nav_title.youtube", defaultMessage: "YouTube" },
-  videos: { id: "media-browser.nav_title.videos", defaultMessage: "Videos" },
-  images: { id: "media-browser.nav_title.images", defaultMessage: "Images" },
+  videos: { id: "media-browser.nav_title.videos", defaultMessage: "Видео" },
+  images: { id: "media-browser.nav_title.images", defaultMessage: "Изображения" },
   gifs: { id: "media-browser.nav_title.gifs", defaultMessage: "GIFs" },
-  scenes: { id: "media-browser.nav_title.scenes", defaultMessage: "Scenes" },
-  avatars: { id: "media-browser.nav_title.avatars", defaultMessage: "Avatars" },
+  scenes: { id: "media-browser.nav_title.scenes", defaultMessage: "Сцены" },
+  avatars: { id: "media-browser.nav_title.avatars", defaultMessage: "Аватары" },
   sketchfab: { id: "media-browser.nav_title.sketchfab", defaultMessage: "Sketchfab" },
   twitch: { id: "media-browser.nav_title.twitch", defaultMessage: "Twitch" }
 });
@@ -66,7 +66,7 @@ export function MediaBrowser({
             <>
               <StarIcon className={styles.favoriteIcon} />
               <h3>
-                <FormattedMessage id="media-browser.favorites-header" defaultMessage="Favorite Rooms" />
+                <FormattedMessage id="media-browser.favorites-header" defaultMessage="Любимые комнаты" />
               </h3>
             </>
           ) : (

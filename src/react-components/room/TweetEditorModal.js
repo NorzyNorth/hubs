@@ -76,7 +76,7 @@ export function TweetEditorModal({
         </div>
         <Button preset="accent4" disabled={sending || tweetLength > 280} onClick={onSend}>
           {sending ? (
-            <FormattedMessage id="tweet-editor-modal.sending-tweet" defaultMessage="Sending Tweet..." />
+            <FormattedMessage id="tweet-editor-modal.sending-tweet" defaultMessage="Отправка Tweet..." />
           ) : (
             <FormattedMessage id="tweet-editor-modal.tweet-button" defaultMessage="Tweet" />
           )}
