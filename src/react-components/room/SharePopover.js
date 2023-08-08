@@ -14,7 +14,7 @@ const shareTooltipDescription = defineMessage({
 
 const sharePopoverTitle = defineMessage({
   id: "share-popover.title",
-  defaultMessage: "Share"
+  defaultMessage: "Поделиться"
 });
 
 export function SharePopoverButton({ items }) {

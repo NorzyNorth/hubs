@@ -9,12 +9,12 @@ import { ToolTip } from "@mozilla/lilypad-ui";
 
 const chatTooltipDescription = defineMessage({
   id: "chat-tooltip.description",
-  defaultMessage: "Open the chat sidebar (T)"
+  defaultMessage: "Откройте боковую панель чата (T)"
 });
 
 type ChatToolbarButtonProps = {
   onClick: () => void;
-  selected: boolean
+  selected: boolean;
 };
 
 const ChatToolbarButton = ({ onClick, selected }: ChatToolbarButtonProps) => {
@@ -31,7 +31,7 @@ const ChatToolbarButton = ({ onClick, selected }: ChatToolbarButtonProps) => {
         statusColor={unreadMessages ? "unread" : undefined}
         icon={<ChatIcon />}
         preset="accent4"
-        label={<FormattedMessage id="chat-toolbar-button" defaultMessage="Chat" />}
+        label={<FormattedMessage id="chat-toolbar-button" defaultMessage="Чат" />}
         selected={selected}
       />
     </ToolTip>

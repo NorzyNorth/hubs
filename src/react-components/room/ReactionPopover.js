@@ -15,12 +15,12 @@ import { ToolTip } from "@mozilla/lilypad-ui";
 
 const reactTooltipDescription = defineMessage({
   id: "react-tooltip.description",
-  defaultMessage: "Reactions"
+  defaultMessage: "Реакции"
 });
 
 const reactionPopoverTitle = defineMessage({
   id: "reaction-popover.title",
-  defaultMessage: "React"
+  defaultMessage: "Реакция"
 });
 
 function ReactionPopoverContent({ items, presence, onToggleHandRaised, ...rest }) {

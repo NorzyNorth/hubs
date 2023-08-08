@@ -1296,40 +1296,40 @@ class UIRoot extends Component {
           },
           entered && {
             id: "start-tour",
-            label: <FormattedMessage id="more-menu.start-tour" defaultMessage="Начало тура" />,
+            label: <FormattedMessage id="more-menu.start-tour" defaultMessage="Начало туториала" />,
             icon: SupportIcon,
             onClick: () => this.props.scene.systems.tips.resetTips()
-          },
-          configs.feature("show_docs_link") && {
-            id: "help",
-            label: <FormattedMessage id="more-menu.help" defaultMessage="Справка" />,
-            icon: SupportIcon,
-            href: configs.link("docs", "https://hubs.mozilla.com/docs")
-          },
-          configs.feature("show_controls_link") && {
-            id: "controls",
-            label: <FormattedMessage id="more-menu.controls" defaultMessage="Средства управления" />,
-            icon: SupportIcon,
-            href: configs.link("controls", "https://hubs.mozilla.com/docs/hubs-controls.html")
-          },
-          configs.feature("show_whats_new_link") && {
-            id: "whats-new",
-            label: <FormattedMessage id="more-menu.whats-new" defaultMessage="Что нового" />,
-            icon: SupportIcon,
-            href: "/whats-new"
-          },
-          configs.feature("show_terms") && {
-            id: "tos",
-            label: <FormattedMessage id="more-menu.tos" defaultMessage="Условия предоставления услуг" />,
-            icon: TextDocumentIcon,
-            href: configs.link("terms_of_use", TERMS)
-          },
-          configs.feature("show_privacy") && {
-            id: "privacy",
-            label: <FormattedMessage id="more-menu.privacy" defaultMessage="Уведомление о конфиденциальности" />,
-            icon: ShieldIcon,
-            href: configs.link("privacy_notice", PRIVACY)
           }
+          // configs.feature("show_docs_link") && {
+          //   id: "help",
+          //   label: <FormattedMessage id="more-menu.help" defaultMessage="Справка" />,
+          //   icon: SupportIcon,
+          //   href: configs.link("docs", "https://hubs.mozilla.com/docs")
+          // }
+          // configs.feature("show_controls_link") && {
+          //   id: "controls",
+          //   label: <FormattedMessage id="more-menu.controls" defaultMessage="Средства управления" />,
+          //   icon: SupportIcon,
+          //   href: configs.link("controls", "https://hubs.mozilla.com/docs/hubs-controls.html")
+          // },
+          // configs.feature("show_whats_new_link") && {
+          //   id: "whats-new",
+          //   label: <FormattedMessage id="more-menu.whats-new" defaultMessage="Что нового" />,
+          //   icon: SupportIcon,
+          //   href: "/whats-new"
+          // },
+          // configs.feature("show_terms") && {
+          //   id: "tos",
+          //   label: <FormattedMessage id="more-menu.tos" defaultMessage="Условия предоставления услуг" />,
+          //   icon: TextDocumentIcon,
+          //   href: configs.link("terms_of_use", TERMS)
+          // },
+          // configs.feature("show_privacy") && {
+          //   id: "privacy",
+          //   label: <FormattedMessage id="more-menu.privacy" defaultMessage="Уведомление о конфиденциальности" />,
+          //   icon: ShieldIcon,
+          //   href: configs.link("privacy_notice", PRIVACY)
+          // }
         ].filter(item => item)
       }
     ];
@@ -1676,7 +1676,7 @@ class UIRoot extends Component {
                     {entered && (
                       <ToolbarButton
                         icon={<LeaveIcon />}
-                        label={<FormattedMessage id="toolbar.leave-room-button" defaultMessage="Leave" />}
+                        label={<FormattedMessage id="toolbar.leave-room-button" defaultMessage="Выйти из комнаты" />}
                         preset="cancel"
                         selected={!!this.state.leaving}
                         onClick={() => {

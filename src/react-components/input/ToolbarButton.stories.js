@@ -27,8 +27,8 @@ export const AllButtons = args => (
     {presets.map(preset => (
       <ToolbarButton key={preset} icon={<ShareIcon />} label={preset} preset={preset} {...args} />
     ))}
-    <ToolbarButton icon={<ShareIcon />} label="Share" preset="accent5" statusColor="recording" {...args} />
-    <ToolbarButton icon={<MicrophoneIcon />} label="Voice" statusColor="enabled" {...args} />
+    <ToolbarButton icon={<ShareIcon />} label="Поделиться" preset="accent5" statusColor="recording" {...args} />
+    <ToolbarButton icon={<MicrophoneIcon />} label="Голос" statusColor="enabled" {...args} />
   </Column>
 );
 
@@ -54,7 +54,7 @@ const containerStyles = {
 
 export const RoomToolbar = args => (
   <RoomLayout
-    toolbarLeft={<ToolbarButton icon={<InviteIcon />} label="Invite" preset="basic" {...args} />}
+    toolbarLeft={<ToolbarButton icon={<InviteIcon />} label="Пригласить" preset="basic" {...args} />}
     toolbarCenter={
       <>
         <div style={containerStyles}>
@@ -68,16 +68,16 @@ export const RoomToolbar = args => (
             {...args}
           />
         </div>
-        <ToolbarButton icon={<ShareIcon />} label="Share" preset="accent5" {...args} />
-        <ToolbarButton icon={<ObjectIcon />} label="Place" preset="accent3" {...args} />
-        <ToolbarButton icon={<ReactionIcon />} label="React" preset="accent2" {...args} />
-        <ToolbarButton icon={<ChatIcon />} label="Chat" preset="accent4" {...args} />
+        <ToolbarButton icon={<ShareIcon />} label="Поделиться" preset="accent5" {...args} />
+        <ToolbarButton icon={<ObjectIcon />} label="Разместить" preset="accent3" {...args} />
+        <ToolbarButton icon={<ReactionIcon />} label="Реакция" preset="accent2" {...args} />
+        <ToolbarButton icon={<ChatIcon />} label="Чат" preset="accent4" {...args} />
       </>
     }
     toolbarRight={
       <>
-        <ToolbarButton icon={<LeaveIcon />} label="Leave" preset="accent1" {...args} />
-        <ToolbarButton icon={<MoreIcon />} label="More" preset="transparent" {...args} />
+        <ToolbarButton icon={<LeaveIcon />} label="Покинуть" preset="accent1" {...args} />
+        <ToolbarButton icon={<MoreIcon />} label="Еще" preset="transparent" {...args} />
       </>
     }
   />
@@ -85,13 +85,19 @@ export const RoomToolbar = args => (
 
 export const EntryToolbar = args => (
   <RoomLayout
-    toolbarLeft={<ToolbarButton icon={<InviteIcon />} label="Invite" preset="basic" {...args} />}
+    toolbarLeft={<ToolbarButton icon={<InviteIcon />} label="Пригласить" preset="basic" {...args} />}
     toolbarCenter={
       <>
-        <ToolbarButton icon={<InviteIcon />} label="Invite" preset="basic" className={styleUtils.hideLg} {...args} />
-        <ToolbarButton icon={<ChatIcon />} label="Chat" preset="accent4" {...args} />
+        <ToolbarButton
+          icon={<InviteIcon />}
+          label="Пригласить"
+          preset="basic"
+          className={styleUtils.hideLg}
+          {...args}
+        />
+        <ToolbarButton icon={<ChatIcon />} label="Чат" preset="accent4" {...args} />
       </>
     }
-    toolbarRight={<ToolbarButton icon={<MoreIcon />} label="More" preset="transparent" {...args} />}
+    toolbarRight={<ToolbarButton icon={<MoreIcon />} label="Еще" preset="transparent" {...args} />}
   />
 );

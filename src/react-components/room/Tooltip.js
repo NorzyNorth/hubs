@@ -39,7 +39,7 @@ if (window.navigator.keyboard !== undefined && window.navigator.keyboard.getLayo
 const onboardingMessages = defineMessages({
   "tips.welcome": {
     id: "tips.welcome",
-    defaultMessage: "<h2>Приветствуем вас в {appName}</h2><p>Давайте посмотрим, как устроено управление</p><p2>."
+    defaultMessage: "<h2>Приветствуем вас в {appName}</h2><p>Давайте посмотрим, как устроено управление</p>."
   },
   "tips.mobile.locomotion": {
     id: "tips.mobile.locomotion2",
@@ -63,7 +63,7 @@ const onboardingMessages = defineMessages({
   },
   "tips.end": {
     id: "tips.end",
-    defaultMessage: "Учебник завершен! Приятного изучения"
+    defaultMessage: "Туториал завершен! Приятного изучения"
   },
   "tips.menu": {
     id: "tips.menu",
@@ -75,7 +75,7 @@ const onboardingMessages = defineMessages({
   },
   "tips.buttons.skip-tour": {
     id: "tips.buttons.skip-tour",
-    defaultMessage: "Пропустить экскурсию"
+    defaultMessage: "Пропустить туториал"
   },
   "tips.buttons.done": {
     id: "tips.buttons.done",

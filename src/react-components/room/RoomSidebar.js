@@ -40,7 +40,7 @@ function SceneAttribution({ attribution }) {
           ) : (
             <FormattedMessage
               id="room-sidebar.scene-attribution"
-              defaultMessage="от {author}"
+              defaultMessage="От {author}"
               values={{
                 author
               }}

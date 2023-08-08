@@ -110,7 +110,7 @@ MoreMenuContextProvider.propTypes = {
 
 const moreMenuTitle = defineMessage({
   id: "more-menu-popover.title",
-  defaultMessage: "More"
+  defaultMessage: "Еще"
 });
 
 export function MoreMenuPopoverButton({ menu }) {
