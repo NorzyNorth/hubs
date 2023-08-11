@@ -154,6 +154,7 @@ export const CAMERA_MODE_THIRD_PERSON_NEAR = 1;
 export const CAMERA_MODE_THIRD_PERSON_FAR = 2;
 export const CAMERA_MODE_INSPECT = 3;
 export const CAMERA_MODE_SCENE_PREVIEW = 4;
+export const CAMERA_MODE_THIRD_PERSON_VIEW = 5;
 
 const NEXT_MODES = {
   [CAMERA_MODE_FIRST_PERSON]: CAMERA_MODE_THIRD_PERSON_NEAR,
@@ -511,6 +512,24 @@ export class CameraSystem {
             panY
           );
         }
+      } else if (this.mode === CAMERA_MODE_FIRST_PERSON) {
+        console.log("THIRD");
+        this.viewingCameraRotator.on = false;
+        translation.makeTranslation(0, 0, 2);
+        this.avatarRig.object3D.updateMatrices();
+        setMatrixWorld(this.viewingRig.object3D, this.avatarRig.object3D.matrixWorld);
+        if (scene.is("vr-mode")) {
+          this.viewingCamera.updateMatrices();
+          setMatrixWorld(this.avatarPOV.object3D, this.viewingCamera.matrixWorld);
+        } else {
+          this.avatarPOV.object3D.updateMatrices();
+          setMatrixWorld(this.viewingCamera, this.avatarPOV.object3D.matrixWorld.multiply(translation));
+        }
+        this.avatarRig.object3D.updateMatrices();
+        this.viewingRig.object3D.matrixWorld.copy(this.avatarRig.object3D.matrixWorld);
+        setMatrixWorld(this.viewingRig.object3D, this.viewingRig.object3D.matrixWorld);
+        this.avatarPOV.object3D.quaternion.copy(this.viewingCamera.quaternion);
+        this.avatarPOV.object3D.matrixNeedsUpdate = true;
       }
     };
   })();

@@ -103,7 +103,7 @@ import { usePermissions } from "./room/hooks/usePermissions";
 import { ChatContextProvider } from "./room/contexts/ChatContext";
 import ChatToolbarButton from "./room/components/ChatToolbarButton/ChatToolbarButton";
 import SeePlansCTA from "./room/components/SeePlansCTA/SeePlansCTA";
-
+import { CAMERA_MODE_THIRD_PERSON_VIEW, CAMERA_MODE_FIRST_PERSON } from "../systems/camera-system";
 const avatarEditorDebug = qsTruthy("avatarEditorDebug");
 
 const IN_ROOM_MODAL_ROUTER_PATHS = ["/media"];
@@ -1300,6 +1300,7 @@ class UIRoot extends Component {
             icon: SupportIcon,
             onClick: () => this.props.scene.systems.tips.resetTips()
           }
+
           // configs.feature("show_docs_link") && {
           //   id: "help",
           //   label: <FormattedMessage id="more-menu.help" defaultMessage="Справка" />,
@@ -1650,6 +1651,23 @@ class UIRoot extends Component {
                       <ChatToolbarButton
                         onClick={() => this.toggleSidebar("chat", { chatPrefix: "", chatAutofocus: false })}
                         selected={this.state.sidebarId === "chat"}
+                      />
+                    )}
+                    {entered && (
+                      <ToolbarButton
+                        icon={<VRIcon />}
+                        label={<FormattedMessage id="toolbar.camera-view" defaultMessage="3rd person view" />}
+                        onClick={() => {
+                          const cameraMode = AFRAME.scenes[0].systems["hubs-systems"].cameraSystem.mode;
+
+                          if (cameraMode === CAMERA_MODE_FIRST_PERSON) {
+                            AFRAME.scenes[0].systems["hubs-systems"].cameraSystem.mode = CAMERA_MODE_THIRD_PERSON_VIEW;
+                          }
+
+                          if (cameraMode === CAMERA_MODE_THIRD_PERSON_VIEW) {
+                            AFRAME.scenes[0].systems["hubs-systems"].cameraSystem.mode = CAMERA_MODE_FIRST_PERSON;
+                          }
+                        }}
                       />
                     )}
                     {entered && isMobileVR && (
