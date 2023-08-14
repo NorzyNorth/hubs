@@ -360,6 +360,7 @@ export class CameraSystem {
       } else if (
         (this.mode === CAMERA_MODE_FIRST_PERSON ||
           this.mode === CAMERA_MODE_THIRD_PERSON_NEAR ||
+          //this.mode === CAMERA_MODE_THIRD_PERSON_VIEW ||
           this.mode === CAMERA_MODE_THIRD_PERSON_FAR) &&
         scene.audioListener.parent !== this.viewingCamera
       ) {
@@ -512,7 +513,7 @@ export class CameraSystem {
             panY
           );
         }
-      } else if (this.mode === CAMERA_MODE_FIRST_PERSON) {
+      } else if (this.mode === CAMERA_MODE_THIRD_PERSON_VIEW) {
         console.log("THIRD");
         this.viewingCameraRotator.on = false;
         translation.makeTranslation(0, 0, 2);

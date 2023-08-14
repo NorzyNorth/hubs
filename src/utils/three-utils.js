@@ -60,7 +60,10 @@ export function setMatrixWorld(object3D, m) {
   object3D.matrixWorld.copy(m);
   if (object3D.parent) {
     object3D.parent.updateMatrices();
-    object3D.matrix.copy(object3D.parent.matrixWorld).invert().multiply(m);
+    object3D.matrix
+    .copy(object3D.parent.matrixWorld)
+    .invert()
+    .multiply(m);
   } else {
     object3D.matrix.copy(m);
   }
@@ -465,6 +468,9 @@ export function createHeadlessModelForSkinnedMesh(mesh) {
   mesh.layers.set(Layers.CAMERA_LAYER_THIRD_PERSON_ONLY);
 
   return createErasedMesh(mesh, eraseBoneIndexes);
+}
+export function createModelForSkinnedMesh(mesh) {
+  return createErasedMesh(mesh, []);
 }
 
 export const isFacingCamera = (function () {

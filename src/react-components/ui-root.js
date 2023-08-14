@@ -1656,7 +1656,7 @@ class UIRoot extends Component {
                     {entered && (
                       <ToolbarButton
                         icon={<VRIcon />}
-                        label={<FormattedMessage id="toolbar.camera-view" defaultMessage="3rd person view" />}
+                        label={<FormattedMessage id="toolbar.camera-view" defaultMessage="third person" />}
                         onClick={() => {
                           const cameraMode = AFRAME.scenes[0].systems["hubs-systems"].cameraSystem.mode;
 
