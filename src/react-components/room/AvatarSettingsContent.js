@@ -26,7 +26,7 @@ export function AvatarSettingsContent({
         disabled={disableDisplayNameInput}
         label={<FormattedMessage id="avatar-settings-content.display-name-label" defaultMessage="Отображаемое имя" />}
         value={displayName}
-        pattern={displayNamePattern}
+        //pattern={displayNamePattern}
         spellCheck="false"
         required
         onChange={onChangeDisplayName}
