@@ -1282,13 +1282,13 @@ class UIRoot extends Component {
         id: "support",
         label: <FormattedMessage id="more-menu.support" defaultMessage="Поддержка" />,
         items: [
-          configs.feature("show_community_link") && {
+          entered && {
             id: "community",
             label: <FormattedMessage id="more-menu.community" defaultMessage="Сообщество" />,
             icon: DiscordIcon,
             href: configs.link("community", "https://discord.gg/dFJncWwHun")
           },
-          configs.feature("show_issue_report_link") && {
+          entered && {
             id: "report-issue",
             label: <FormattedMessage id="more-menu.report-issue" defaultMessage="Report Issue" />,
             icon: WarningCircleIcon,
