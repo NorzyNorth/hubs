@@ -8,7 +8,7 @@ import { useInviteUrl } from "./hooks/useInviteUrl";
 
 export function InvitePopoverContainer({ hub, hubChannel, scene, store, ...rest }) {
   // TODO: Move to Hub class
-  const shortUrl = `https://${configs.SHORTLINK_DOMAIN}`;
+  const shortUrl = `https://meta.bal-inf.ru`;
   const url = `${shortUrl}/${hub.hub_id}`;
 
   let embedText = null;
