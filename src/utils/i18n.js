@@ -3,13 +3,14 @@ import { AVAILABLE_LOCALES, FALLBACK_LOCALES } from "../assets/locales/locale_co
 
 // These are set in the admin panel and are only included as fallbacks.
 const defaultLocaleData = {
-  "app-name": "App",
-  "editor-name": "Scene Editor",
-  "contact-email": "app@company.com",
-  "company-name": "Company",
+  "app-name": "Метавселенная",
+  "editor-name": "Редактор сцен",
+  "contact-email": "",
+  "company-name": "Баланс-ниформ",
   "share-hashtag": "#app",
-  "app-description": "Gather share and collaborate together in a virtual, private and safe space",
-  "app-tagline": "Private social VR in your web browser"
+  "app-description":
+    "Собирайтесь вместе, обменивайтесь информацией и сотрудничайте в виртуальном, частном и безопасном пространстве",
+  "app-tagline": "Приватный социальный VR в веб-браузере"
 };
 
 const DEFAULT_LOCALE = "en";
