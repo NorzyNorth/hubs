@@ -30,7 +30,7 @@ const ChatToolbarButton = ({ onClick, selected }: ChatToolbarButtonProps) => {
         onClick={onClick}
         statusColor={unreadMessages ? "unread" : undefined}
         icon={<ChatIcon />}
-        preset="accent4"
+        preset="chat"
         label={<FormattedMessage id="chat-toolbar-button" defaultMessage="Чат" />}
         selected={selected}
       />

@@ -29,7 +29,7 @@
 
 :local(.icon-container) {
   position: relative;
-  border-radius: 9999px;
+  border-radius: 8px;
   width: 48px;
   height: 48px;
   display: flex;
@@ -327,74 +327,177 @@
   }
 }
 
-:local(.accent1) {
+:local(.avatar) {
   :local(.icon-container) {
-    background-color: theme.$accent1-color;
-    border-color: theme.$accent1-border-color;
+    background-color: #af2efa;
+    border-color: #af2efa;
 
     &:disabled,
     &[disabled] {
       svg {
-        color: theme.$disabled-icon-color;
-      }
-    }
-  }
-
-  &:hover :local(.icon-container) {
-    background-color: theme.$accent1-color-hover;
-
-    &:disabled,
-    &[disabled] {
-      background-color: theme.$accent1-color;
-    }
-  }
-
-  &:active :local(.icon-container) {
-    background-color: theme.$accent1-color-pressed;
-  }
-
-  &:local(.selected) {
-    :local(.icon-container) {
-      border-color: theme.$accent1-color;
-      background-color: theme.$toolbar-icon-selected-bg;
-
-      svg {
-        color: theme.$accent1-color;
-      }
-    }
-
-    label {
-      color: theme.$accent1-color;
-    }
-
-    &:hover {
-      :local(.icon-container) {
-        border-color: theme.$accent1-color-hover;
-
-        svg {
-          color: theme.$accent1-color-hover;
-        }
-      }
-
-      &:disabled,
-      &[disabled] {
-        svg {
-          color: theme.$disabled-icon-color;
-        }
-      }
-    }
-
-    &:active {
-      :local(.icon-container) {
-        border-color: theme.$accent1-color-pressed;
-
-        svg {
-          color: theme.$accent1-color-pressed;
-        }
+        color: white;
       }
     }
   }
 }
+:local(.reaction) {
+  :local(.icon-container) {
+    background-color: #ff4acc;
+    border-color: #ff4acc;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+:local(.share) {
+  :local(.icon-container) {
+    background-color: #65e8a9;
+    border-color: #65e8a9;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+:local(.vr) {
+  :local(.icon-container) {
+    background-color: #4baef5;
+    border-color: #4baef5;
+    svg {
+      fill: white;
+      color: white;
+    }
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+:local(.place) {
+  :local(.icon-container) {
+    background-color: #5a7eff;
+    border-color: #5a7eff;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+:local(.chat) {
+  :local(.icon-container) {
+    background-color: #8381ff;
+    border-color: #8381ff;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+
+:local(.upload) {
+  :local(.icon-container) {
+    background-color: #ee829c;
+    border-color: #ee829c;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+:local(.gif) {
+  :local(.icon-container) {
+    background-color: #3fcfef;
+    border-color: #3fcfef;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+:local(.scene) {
+  :local(.icon-container) {
+    background-color: #de6df1;
+    border-color: #de6df1;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+:local(.3d) {
+  :local(.icon-container) {
+    background-color: #5a7eff;
+    border-color: #5a7eff;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+:local(.pen) {
+  :local(.icon-container) {
+    background-color: #9c14fc;
+    border-color: #9c14fc;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+:local(.camera) {
+  :local(.icon-container) {
+    background-color: #5a7eff;
+    border-color: #5a7eff;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
+
+// --pen-color: #9c14fc;
+// --camera-color: #3fcfef;
+// --avatar-icon:
+// --scene-icon: #de6df1;
+// --upload-icon: #5a7eff;
+// --reaction-icon: #ff4acc;
+// --chat-icon: #8381ff;
+// --vr-icon: #4baef5;
+// --share-icon: #0038ff;
 
 :local(.accent2) {
   :local(.icon-container) {

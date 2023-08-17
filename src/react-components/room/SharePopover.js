@@ -44,7 +44,7 @@ export function SharePopoverButton({ items }) {
           }
         }}
         label={title}
-        preset="accent5"
+        preset="share"
         statusColor={activeItem && "recording"}
       />
     );
@@ -66,7 +66,7 @@ export function SharePopoverButton({ items }) {
             selected={popoverVisible}
             onClick={togglePopover}
             label={title}
-            preset="accent5"
+            preset="share"
           />
         </ToolTip>
       )}

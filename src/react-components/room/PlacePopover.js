@@ -44,7 +44,7 @@ export function PlacePopoverButton({ items }) {
             selected={popoverVisible}
             onClick={togglePopover}
             label={title}
-            preset="accent3"
+            preset="place"
           />
         </ToolTip>
       )}

@@ -1,8 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { ReactComponent as VideoIcon } from "../icons/Video.svg";
+import { ReactComponent as CameraIcon } from "../icons/Camera.svg";
 import { ReactComponent as DesktopIcon } from "../icons/Desktop.svg";
 import { ReactComponent as AvatarIcon } from "../icons/Avatar.svg";
+
 import { SharePopoverButton } from "./SharePopover";
 import { FormattedMessage } from "react-intl";
 import useAvatar from "./hooks/useAvatar";
@@ -123,7 +124,7 @@ export function SharePopoverContainer({ scene, hubChannel }) {
   const items = [
     canShareCamera && {
       id: "camera",
-      icon: VideoIcon,
+      icon: CameraIcon,
       color: "accent5",
       label: <FormattedMessage id="share-popover.source.camera" defaultMessage="Камера" />,
       onSelect: toggleShareCamera,

@@ -1655,6 +1655,7 @@ class UIRoot extends Component {
                     )}
                     {entered && (
                       <ToolbarButton
+                        preset="vr"
                         icon={<VRIcon />}
                         label={<FormattedMessage id="toolbar.camera-view" defaultMessage="3-е лицо" />}
                         onClick={() => {
