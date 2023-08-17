@@ -19,7 +19,7 @@ export default {
 };
 
 const items = [
-  { id: "pen", icon: PenIcon, color: "accent5", label: "Pen" },
+  { id: "pen", icon: PenIcon, color: "accent5", label: "f" },
   { id: "camera", icon: CameraIcon, color: "accent5", label: "Camera" },
   { id: "text", icon: TextIcon, color: "accent4", label: "Text" },
   { id: "link", icon: LinkIcon, color: "accent4", label: "Link" },

@@ -1,6 +1,7 @@
-@import 'shared';
+@import "shared";
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -21,7 +22,8 @@ body.vr-mode-stretch {
   }
 }
 
-.a-enter-vr, .a-orientation-modal {
+.a-enter-vr,
+.a-orientation-modal {
   display: none;
 }
 
@@ -33,8 +35,9 @@ body.vr-mode-stretch {
   cursor: none;
 }
 
-.webxr-realities, .webxr-sessions {
-  @extend %unselectable
+.webxr-realities,
+.webxr-sessions {
+  @extend %unselectable;
 }
 
 // HACK: Deals with a performance regression in Chrome 75 where, once
@@ -42,6 +45,7 @@ body.vr-mode-stretch {
 // scanning the page on mouse drag kills performance.
 
 a-entity {
+  // font-family: "Gilroy";
   display: none;
 }
 

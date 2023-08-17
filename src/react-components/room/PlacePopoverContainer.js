@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { ReactComponent as PenIcon } from "../icons/Pen.svg";
 import { ReactComponent as CameraIcon } from "../icons/Camera.svg";
-// import { ReactComponent as TextIcon } from "../icons/Text.svg";
-// import { ReactComponent as LinkIcon } from "../icons/Link.svg";
 import { ReactComponent as GIFIcon } from "../icons/GIF.svg";
 import { ReactComponent as ObjectIcon } from "../icons/Object.svg";
 import { ReactComponent as AvatarIcon } from "../icons/Avatar.svg";
@@ -28,7 +26,7 @@ export function PlacePopoverContainer({ scene, mediaSearchStore, showNonHistorie
         hubChannel.can("spawn_drawing") && {
           id: "pen",
           icon: PenIcon,
-          color: "accent5",
+          color: "pen",
           label: <FormattedMessage id="place-popover.item-type.pen" defaultMessage="Ручка" />,
           onSelect: () => scene.emit("penButtonPressed"),
           selected: hasActivePen
@@ -36,7 +34,7 @@ export function PlacePopoverContainer({ scene, mediaSearchStore, showNonHistorie
         hubChannel.can("spawn_camera") && {
           id: "camera",
           icon: CameraIcon,
-          color: "accent5",
+          color: "camera",
           label: <FormattedMessage id="place-popover.item-type.camera" defaultMessage="Камера" />,
           onSelect: () => scene.emit("action_toggle_camera"),
           selected: hasActiveCamera
@@ -52,36 +50,35 @@ export function PlacePopoverContainer({ scene, mediaSearchStore, showNonHistorie
           configs.integration("tenor") && {
             id: "gif",
             icon: GIFIcon,
-            color: "accent2",
+            color: "gif",
             label: <FormattedMessage id="place-popover.item-type.gif" defaultMessage="GIF" />,
             onSelect: () => mediaSearchStore.sourceNavigate("gifs")
           },
           configs.integration("sketchfab") && {
             id: "model",
             icon: ObjectIcon,
-            color: "accent2",
+            color: "3d",
             label: <FormattedMessage id="place-popover.item-type.model" defaultMessage="3D Модель" />,
             onSelect: () => mediaSearchStore.sourceNavigate("sketchfab")
           },
           {
             id: "avatar",
             icon: AvatarIcon,
-            color: "accent1",
+            color: "avatar",
             label: <FormattedMessage id="place-popover.item-type.avatar" defaultMessage="Аватар" />,
             onSelect: () => mediaSearchStore.sourceNavigate("avatars")
           },
           {
             id: "scene",
             icon: SceneIcon,
-            color: "accent1",
+            color: "scene",
             label: <FormattedMessage id="place-popover.item-type.scene" defaultMessage="Сцена" />,
             onSelect: () => mediaSearchStore.sourceNavigate("scenes")
           },
-          // TODO: Launch system file prompt directly
           {
             id: "upload",
             icon: UploadIcon,
-            color: "accent3",
+            color: "upload",
             label: <FormattedMessage id="place-popover.item-type.upload" defaultMessage="Загрузить" />,
             onSelect: () => showNonHistoriedDialog(ObjectUrlModalContainer, { scene })
           }
