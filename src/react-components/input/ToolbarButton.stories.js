@@ -68,10 +68,10 @@ export const RoomToolbar = args => (
             {...args}
           />
         </div>
-        <ToolbarButton icon={<ShareIcon />} label="Поделиться" preset="accent5" {...args} />
-        <ToolbarButton icon={<ObjectIcon />} label="Разместить" preset="accent3" {...args} />
-        <ToolbarButton icon={<ReactionIcon />} label="Реакция" preset="accent2" {...args} />
-        <ToolbarButton icon={<ChatIcon />} label="Чат" preset="accent4" {...args} />
+        <ToolbarButton icon={<ShareIcon />} label="Поделиться" preset="desktop-color" {...args} />
+        <ToolbarButton icon={<ObjectIcon />} label="Разместить" preset="desktop-color" {...args} />
+        <ToolbarButton icon={<ReactionIcon />} label="Реакция" preset="desktop-color" {...args} />
+        <ToolbarButton icon={<ChatIcon />} label="Чат" preset="desktop-color" {...args} />
       </>
     }
     toolbarRight={
