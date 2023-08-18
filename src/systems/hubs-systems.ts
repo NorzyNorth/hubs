@@ -79,6 +79,7 @@ import { linearTransformSystem } from "../bit-systems/linear-transform";
 import { quackSystem } from "../bit-systems/quack";
 import { mixerAnimatableSystem } from "../bit-systems/mixer-animatable";
 import { loopAnimationSystem } from "../bit-systems/loop-animation";
+import { linkSystem } from "../bit-systems/link-system";
 
 declare global {
   interface Window {
@@ -189,8 +190,6 @@ export function mainTick(xrFrame: XRFrame, renderer: WebGLRenderer, scene: Scene
   sceneLoadingSystem(world, hubsSystems.environmentSystem, hubsSystems.characterController);
   mediaLoadingSystem(world);
 
-  physicsCompatSystem(world, hubsSystems.physicsSystem);
-
   networkedTransformSystem(world);
 
   aframeSystems.userinput.tick2(xrFrame);
@@ -198,7 +197,11 @@ export function mainTick(xrFrame: XRFrame, renderer: WebGLRenderer, scene: Scene
   interactionSystem(world, hubsSystems.cursorTargettingSystem, t, aframeSystems);
 
   buttonSystems(world);
+
+  physicsCompatSystem(world, hubsSystems.physicsSystem);
+  hubsSystems.physicsSystem.tick(dt);
   constraintsSystem(world, hubsSystems.physicsSystem);
+  floatyObjectSystem(world);
 
   // We run this earlier in the frame so things have a chance to override properties run by animations
   hubsSystems.animationMixerSystem.tick(dt);
@@ -221,8 +224,6 @@ export function mainTick(xrFrame: XRFrame, renderer: WebGLRenderer, scene: Scene
   hubsSystems.positionAtBorderSystem.tick();
   hubsSystems.twoPointStretchingSystem.tick();
 
-  floatyObjectSystem(world);
-
   hubsSystems.holdableButtonSystem.tick();
   hubsSystems.hoverButtonSystem.tick();
   hubsSystems.drawingMenuSystem.tick();
@@ -237,7 +238,6 @@ export function mainTick(xrFrame: XRFrame, renderer: WebGLRenderer, scene: Scene
   hubsSystems.soundEffectsSystem.tick();
   hubsSystems.scenePreviewCameraSystem.tick();
   scenePreviewCameraSystem(world, hubsSystems.cameraSystem);
-  hubsSystems.physicsSystem.tick(dt);
   hubsSystems.inspectYourselfSystem.tick(hubsSystems.el, aframeSystems.userinput, hubsSystems.cameraSystem);
   hubsSystems.cameraSystem.tick(hubsSystems.el, dt);
   cameraToolSystem(world);
@@ -251,7 +251,8 @@ export function mainTick(xrFrame: XRFrame, renderer: WebGLRenderer, scene: Scene
   videoMenuSystem(world, aframeSystems.userinput);
   videoSystem(world, hubsSystems.audioSystem);
   pdfMenuSystem(world, sceneEl.is("frozen"));
-  linkHoverMenuSystem(world);
+  linkSystem(world);
+  linkHoverMenuSystem(world, sceneEl.is("frozen"));
   pdfSystem(world);
   mediaFramesSystem(world, hubsSystems.physicsSystem);
   hubsSystems.audioZonesSystem.tick(hubsSystems.el);
@@ -263,7 +264,7 @@ export function mainTick(xrFrame: XRFrame, renderer: WebGLRenderer, scene: Scene
   simpleWaterSystem(world);
   linearTransformSystem(world);
   quackSystem(world);
-  
+
   mixerAnimatableSystem(world);
   loopAnimationSystem(world);
 
