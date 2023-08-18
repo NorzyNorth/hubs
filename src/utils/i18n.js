@@ -5,7 +5,7 @@ import { AVAILABLE_LOCALES, FALLBACK_LOCALES } from "../assets/locales/locale_co
 const defaultLocaleData = {
   "app-name": "Метавселенная",
   "editor-name": "Редактор сцен",
-  "contact-email": "",
+  "contact-email": "kaa@bal-inf.ru",
   "company-name": "Баланс-ниформ",
   "share-hashtag": "#app",
   "app-description":
