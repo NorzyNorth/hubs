@@ -97,6 +97,10 @@ AFRAME.registerComponent("name-tag", {
 
     // TODO this is horribly inefficient draw call and geometry wise. Replace with custom shader code or at least a uv-croll image
     this.nametagTyping = new THREE.Group();
+    this.nametagText.el.setAttribute("text", {
+      font: "https://cdn.aframe.io/fonts/mozillavr.fnt"
+    });
+
     this.nametagTyping.position.set(0, this.nameTagVolumeY, 0.001);
     this.nametagTyping.matrixNeedsUpdate = true;
     for (let i = 0; i < 5; i++) {
@@ -245,6 +249,8 @@ AFRAME.registerComponent("name-tag", {
       this.nametagText.el.setAttribute("text", {
         value: this.displayName
       });
+      // this.nametagText.el.setAttribute("text", {
+      // });
       this.prevDisplayName = this.displayName;
     }
 

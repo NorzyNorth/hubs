@@ -3,8 +3,7 @@
 // by @jamesckane at Paradowski Creative (paradowski.com)
 
 import { Text } from "troika-three-text";
-
-// Mark this type of object so we can filter in from our shader patching
+import font from "../react-components/font/Gilroy/fff.otf"; // Mark this type of object so we can filter in from our shader patching
 Text.prototype.isTroikaText = true;
 
 const THREE_SIDES = {
@@ -99,7 +98,7 @@ AFRAME.registerComponent("text", {
   update: function () {
     const data = this.data;
     const mesh = this.troikaTextMesh;
-
+    console.log("font :>> ", font);
     // Update the text mesh
     mesh.text = data.value || "";
     mesh.textAlign = data.textAlign;
@@ -112,7 +111,7 @@ AFRAME.registerComponent("text", {
     mesh.depthOffset = data.depthOffset || 0;
     mesh.direction = data.direction;
     mesh.fillOpacity = data.fillOpacity;
-    mesh.font = data.fontUrl;
+    mesh.font = font;
     mesh.fontSize = data.fontSize;
     mesh.letterSpacing = data.letterSpacing || 0;
     mesh.clipRect = data.clipRect;

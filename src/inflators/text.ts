@@ -55,7 +55,7 @@ const DEFAULTS: Required<TextParams> = {
   depthOffset: 0,
   direction: "auto",
   fillOpacity: 1.0,
-  fontUrl: null,
+  fontUrl: "https://cdn.aframe.io/fonts/mozillavr.fnt",
   fontSize: 0.075,
   glyphGeometryDetail: 1.0,
   gpuAccelerateSDF: true,
@@ -100,6 +100,7 @@ export function inflateText(world: HubsWorld, eid: number, params: TextParams) {
   text.direction = requiredParams.direction;
   text.fillOpacity = requiredParams.fillOpacity;
   text.fontSize = requiredParams.fontSize;
+
   text.glyphGeometryDetail = requiredParams.glyphGeometryDetail;
   text.gpuAccelerateSDF = requiredParams.gpuAccelerateSDF;
   text.letterSpacing = requiredParams.letterSpacing;
