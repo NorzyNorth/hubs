@@ -514,7 +514,6 @@ export class CameraSystem {
           );
         }
       } else if (this.mode === CAMERA_MODE_THIRD_PERSON_VIEW) {
-        console.log("THIRD");
         this.viewingCameraRotator.on = false;
         translation.makeTranslation(0, 0, 2);
         this.avatarRig.object3D.updateMatrices();
