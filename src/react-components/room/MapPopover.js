@@ -13,12 +13,12 @@ import { Column } from "../layout/Column";
 
 const mapTooltipDescription = defineMessage({
   id: "share-tooltip.description",
-  defaultMessage: "ЖОСКА ПОДРОЧИТЬ"
+  defaultMessage: "Карта"
 });
 
 const mapPopoverTitle = defineMessage({
   id: "share-popover.title",
-  defaultMessage: "ЖОСКА ПОДРОЧИТЬ"
+  defaultMessage: "Карта"
 });
 
 export function MapPopoverButton({ items }) {
