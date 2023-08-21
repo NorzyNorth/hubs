@@ -396,6 +396,19 @@
     }
   }
 }
+:local(.map) {
+  :local(.icon-container) {
+    background-color: #725aff;
+    border-color: #725aff;
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
 :local(.chat) {
   :local(.icon-container) {
     background-color: #8381ff;

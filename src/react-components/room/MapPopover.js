@@ -2,16 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Popover } from "../popover/Popover";
 import { ToolbarButton } from "../input/ToolbarButton";
-import { ReactComponent as ShareIcon } from "../icons/Share.svg";
-import { defineMessage, useIntl, FormattedMessage } from "react-intl";
+import { ReactComponent as MapIcon } from "../icons/Map.svg";
+import { defineMessage, useIntl } from "react-intl";
 import { ToolTip } from "@mozilla/lilypad-ui";
 import { usePublicRooms } from "../home/usePublicRooms";
 import { MediaGrid } from "../room/MediaGrid";
 import { MediaTile } from "../room/MediaTiles";
 import { scaledThumbnailUrlFor } from "../../utils/media-url-utils";
 import { Column } from "../layout/Column";
-import { Container } from "../layout/Container";
-import styles from "/src/react-components/home/HomePage.scss";
 
 const mapTooltipDescription = defineMessage({
   id: "share-tooltip.description",
@@ -53,7 +51,7 @@ export function MapPopoverButton({ items }) {
           }
         }}
         label={title}
-        preset="share"
+        preset="map"
         statusColor={activeItem && "recording"}
       />
     );
@@ -87,11 +85,11 @@ export function MapPopoverButton({ items }) {
         <ToolTip description={description}>
           <ToolbarButton
             ref={triggerRef}
-            icon={<ShareIcon />}
+            icon={<MapIcon />}
             selected={popoverVisible}
             onClick={togglePopover}
             label={title}
-            preset="share"
+            preset="map"
           />
         </ToolTip>
       )}
