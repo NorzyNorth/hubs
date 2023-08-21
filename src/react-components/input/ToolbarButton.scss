@@ -383,6 +383,23 @@
     }
   }
 }
+:local(.map) {
+  :local(.icon-container) {
+    background-color: #4baef5;
+    border-color: #4baef5;
+    svg {
+      fill: white;
+      color: white;
+    }
+
+    &:disabled,
+    &[disabled] {
+      svg {
+        color: white;
+      }
+    }
+  }
+}
 :local(.place) {
   :local(.icon-container) {
     background-color: #5a7eff;

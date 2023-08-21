@@ -104,6 +104,7 @@ import { ChatContextProvider } from "./room/contexts/ChatContext";
 import ChatToolbarButton from "./room/components/ChatToolbarButton/ChatToolbarButton";
 import SeePlansCTA from "./room/components/SeePlansCTA/SeePlansCTA";
 import { CAMERA_MODE_THIRD_PERSON_VIEW, CAMERA_MODE_FIRST_PERSON } from "../systems/camera-system";
+import { MapPopoverContainer } from "./room/MapPopoverContainer";
 const avatarEditorDebug = qsTruthy("avatarEditorDebug");
 
 const IN_ROOM_MODAL_ROUTER_PATHS = ["/media"];
@@ -1637,8 +1638,16 @@ class UIRoot extends Component {
                               mediaSearchStore={this.props.mediaSearchStore}
                               showNonHistoriedDialog={this.showNonHistoriedDialog}
                             />
+
+                            {/* <MapPopoverContainer
+                              scene={this.props.scene}
+                              hubChannel={this.props.hubChannel}
+                              mediaSearchStore={this.props.mediaSearchStore}
+                              showNonHistoriedDialog={this.showNonHistoriedDialog}
+                            /> */}
                           </>
                         )}
+
                         {this.props.hubChannel.can("spawn_emoji") && (
                           <ReactionPopoverContainer
                             scene={this.props.scene}
@@ -1680,6 +1689,12 @@ class UIRoot extends Component {
                         onClick={() => exit2DInterstitialAndEnterVR(true)}
                       />
                     )}
+                    <MapPopoverContainer
+                      scene={this.props.scene}
+                      hubChannel={this.props.hubChannel}
+                      mediaSearchStore={this.props.mediaSearchStore}
+                      showNonHistoriedDialog={this.showNonHistoriedDialog}
+                    />
                   </>
                 }
                 toolbarRight={
