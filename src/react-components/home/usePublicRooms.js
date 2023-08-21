@@ -8,7 +8,7 @@ export function usePublicRooms() {
   const getMoreRooms = useCallback(
     cursor => fetchReticulumAuthenticated(`/api/v1/media/search?source=rooms&filter=public&cursor=${cursor}`),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [auth.isSignedIn]
+    [auth?.isSignedIn]
   );
   return usePaginatedAPI(getMoreRooms);
 }
