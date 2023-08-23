@@ -1287,7 +1287,7 @@ class UIRoot extends Component {
             id: "community",
             label: <FormattedMessage id="more-menu.community" defaultMessage="Сообщество" />,
             icon: DiscordIcon,
-            href: configs.link("community", "https://discord.gg/dFJncWwHun")
+            href: configs.link("community", "https://vk.com/school_metaverse")
           },
           entered && {
             id: "report-issue",
