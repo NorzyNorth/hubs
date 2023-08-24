@@ -1,15 +1,9 @@
-const theme = [
+[
   {
-    id: "hubs-default",
-    default: true,
-    name: "Hubs Default",
-    variables: {}
-  },
-  {
-    name: "Hubs Dark Mode",
-    id: "hubs-dark-mode",
-    darkModeDefault: true,
-    variables: {
+    "id": "hubs-default",
+    "default": true,
+    "name": "Hubs Default",
+    "variables": {
       "loading-screen-background": "radial-gradient(50% 50% at 50% 50%, #15171B 0%, #282C31 100%)",
       "accept-color-pressed": "#21242C",
       "primary-color-hover": "#12A4ED",
@@ -87,6 +81,4 @@ const theme = [
       "toolbar-label-accent5": "#ffffff"
     }
   }
-];
-
-export default theme;
+]

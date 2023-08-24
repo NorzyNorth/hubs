@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  background-color: theme.$background1-color;
-  border: 1px solid theme.$border1-color;
+  background-color: #313338;
+  border: 1px solid #313338;
   min-width: 160px;
   z-index: 10;
   max-height: calc(100vh - 200px);
@@ -70,6 +70,7 @@
 
 :local(.header) {
   display: flex;
+  color: #fff;
   justify-content: center;
   align-items: center;
   padding: 0 8px;
@@ -82,9 +83,13 @@
   }
 
   button {
+    svg {
+      fill: #fff;
+    }
     position: absolute;
     left: 8px;
     border: none;
+    color: #fff;
     background-color: transparent;
 
     &:hover * {
