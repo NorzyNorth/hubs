@@ -160,7 +160,7 @@ export function HomePage() {
       {sortedFavoriteRooms.length > 0 && (
         <Container className={styles.roomsContainer}>
           <h3 className={styles.roomsHeading}>
-            <FormattedMessage id="home-page.favorite-rooms" defaultMessage="Любимые комнаты" />
+            <FormattedMessage id="home-page.favorite-rooms" defaultMessage="Любимые комнаты\" />
           </h3>
           <Column grow padding className={styles.rooms}>
             <MediaGrid center>
