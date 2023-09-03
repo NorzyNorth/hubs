@@ -14,7 +14,7 @@ function PinButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.ACTION}
-      text={"pin"}
+      text={"прикрепить"}
       {...props}
     />
   );
@@ -28,7 +28,7 @@ function UnpinButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.ACTION}
-      text={"unpin"}
+      text={"открепить"}
       {...props}
     />
   );
@@ -42,7 +42,7 @@ function CameraFocusButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.DEFAULT}
-      text={"focus"}
+      text={"посмотреть"}
       {...props}
     />
   );
@@ -70,7 +70,7 @@ function RemoveButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.DEFAULT}
-      text={"delete"}
+      text={"удалить"}
       {...props}
     />
   );
@@ -84,7 +84,7 @@ function DropButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.DEFAULT}
-      text={"drop"}
+      text={"выкинуть"}
       {...props}
     />
   );
@@ -98,7 +98,7 @@ function InspectButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.DEFAULT}
-      text={"inspect"}
+      text={"осмотреть"}
       {...props}
     />
   );
@@ -112,7 +112,7 @@ function DeserializeDrawingButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.DEFAULT}
-      text={"deserialize"}
+      text={"десериализация"}
       {...props}
     />
   );
@@ -126,7 +126,7 @@ function OpenLinkButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.DEFAULT}
-      text={"open link"}
+      text={"открыть страницу"}
       {...props}
     />
   );
@@ -140,7 +140,7 @@ function RefreshButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.DEFAULT}
-      text={"refresh"}
+      text={"обновить"}
       {...props}
     />
   );
@@ -154,7 +154,7 @@ function CloneButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.DEFAULT}
-      text={"clone"}
+      text={"клонировать"}
       {...props}
     />
   );
@@ -168,7 +168,7 @@ function RotateButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.ACTION}
-      text={"rotate"}
+      text={"повернуть"}
       holdable
       {...props}
     />
@@ -183,7 +183,7 @@ function MirrorButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.ACTION}
-      text={"mirror"}
+      text={"отражение"}
       {...props}
     />
   );
@@ -197,7 +197,7 @@ function ScaleButton(props: Attrs) {
       width={0.4}
       height={buttonHeight}
       type={BUTTON_TYPES.ACTION}
-      text={"scale"}
+      text={"масштаб"}
       holdable
       {...props}
     />

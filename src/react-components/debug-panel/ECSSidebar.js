@@ -125,10 +125,10 @@ function ObjectProperties({ obj }) {
       <div className="title">
         <span>{displayName}</span>
         <button onClick={() => console.log(obj)}>
-          <FormattedMessage id="ecs-sidebar.log-button" defaultMessage="log" />
+          <FormattedMessage id="ecs-sidebar.log-button" defaultMessage="записывать" />
         </button>
         <button onClick={() => removeEntity(APP.world, obj.eid)}>
-          <FormattedMessage id="ecs-sidebar.remove-button" defaultMessage="remove" />
+          <FormattedMessage id="ecs-sidebar.remove-button" defaultMessage="удалить" />
         </button>
       </div>
       <div className="content">{obj.eid && <EntityInfo eid={obj.eid} />}</div>
@@ -139,7 +139,7 @@ function ObjectProperties({ obj }) {
 function RefreshButton({ onClick }) {
   return (
     <IconButton onClick={onClick}>
-      <FormattedMessage id="ecs-sidebar.refresh-icon" defaultMessage="refresh" />
+      <FormattedMessage id="ecs-sidebar.refresh-icon" defaultMessage="обновить" />
     </IconButton>
   );
 }

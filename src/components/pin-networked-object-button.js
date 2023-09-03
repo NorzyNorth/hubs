@@ -96,7 +96,7 @@ AFRAME.registerComponent("pin-networked-object-button", {
     this.tipEl.object3D.visible = !!(canPin && !isPinned && this.hovering && discordBridges.length > 0);
 
     if (!canPin) return;
-    this.labelEl.setAttribute("text", "value", isPinned ? "un-pin" : "pin");
+    this.labelEl.setAttribute("text", "value", isPinned ? "открепить" : "закрепить");
     applyThemeToTextButton(this.el, isPinned);
   }
 });

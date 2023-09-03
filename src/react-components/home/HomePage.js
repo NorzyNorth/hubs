@@ -99,12 +99,12 @@ export function HomePage() {
           <Column padding gap="xl" className={styles.card}>
             <img src={configs.image("landing_rooms_thumb")} />
             <h3>
-              <FormattedMessage id="home-page.rooms-title" defaultMessage="Instantly create rooms" />
+              <FormattedMessage id="home-page.rooms-title" defaultMessage="Мгновенно создавайте комнаты" />
             </h3>
             <p>
               <FormattedMessage
                 id="home-page.rooms-blurb"
-                defaultMessage="Share virtual spaces with your friends, co-workers, and communities. When you create a room with Hubs, you’ll have a private virtual meeting space that you can instantly share <b>- no downloads or VR headset necessary.</b>"
+                defaultMessage="Делитесь виртуальными пространствами со своими друзьями, коллегами и сообществами. Когда вы создадите комнату с хабами, у вас будет личное виртуальное пространство для встреч, которым вы сможете мгновенно поделиться <b>- никаких загрузок или виртуальной гарнитуры не требуется.</b>"
                 values={{ b: wrapInBold }}
               />
             </p>
@@ -112,7 +112,7 @@ export function HomePage() {
           <Column padding gap="xl" className={styles.card}>
             <img src={configs.image("landing_communicate_thumb")} />
             <h3>
-              <FormattedMessage id="home-page.communicate-title" defaultMessage="Communicate and Collaborate" />
+              <FormattedMessage id="home-page.communicate-title" defaultMessage="Общайтесь и сотрудничайте" />
             </h3>
             <p>
               <FormattedMessage
